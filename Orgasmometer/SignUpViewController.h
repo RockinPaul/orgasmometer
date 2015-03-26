@@ -15,7 +15,7 @@
 #import <Parse/Parse.h>
 //#import <ParseUI/ParseUI.h>
 
-@interface SignUpViewController : UIViewController
+@interface SignUpViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *emailTextField;
 @property (nonatomic, strong) IBOutlet UITextField *passwordTextField;
@@ -27,5 +27,6 @@
 
 - (void)signUp;
 - (void)signIn;
+- (void)presentViewController;
 
 @end
