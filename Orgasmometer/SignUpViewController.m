@@ -16,6 +16,10 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        [self presentViewController];
+    }
 }
 
 
@@ -27,6 +31,7 @@
 
 
 - (void)auth:(UIButton *)sender {
+    
     if ([[self.signButton.titleLabel text] isEqualToString:@"Sign In"]) {
         [self signIn];
     } else
