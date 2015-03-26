@@ -11,7 +11,7 @@
 		E9DD6FB81AC459A8002310C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB71AC459A8002310C4 /* AppDelegate.m */; };
 		E9DD6FBB1AC459A8002310C4 /* Orgasmometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB91AC459A8002310C4 /* Orgasmometer.xcdatamodeld */; };
 		E9DD6FBE1AC459A8002310C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FBD1AC459A8002310C4 /* ViewController.m */; };
-		E9DD6FC11AC459A8002310C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9DD6FBF1AC459A8002310C4 /* Main.storyboard */; };
+		E9DD6FC11AC459A8002310C4 /* MainV2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9DD6FBF1AC459A8002310C4 /* MainV2.storyboard */; };
 		E9DD6FC31AC459A8002310C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9DD6FC21AC459A8002310C4 /* Images.xcassets */; };
 		E9DD6FC61AC459A8002310C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9DD6FC41AC459A8002310C4 /* LaunchScreen.xib */; };
 		E9DD6FD21AC459A8002310C4 /* OrgasmometerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FD11AC459A8002310C4 /* OrgasmometerTests.m */; };
@@ -36,7 +36,7 @@
 		E9DD6FBA1AC459A8002310C4 /* Orgasmometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Orgasmometer.xcdatamodel; sourceTree = "<group>"; };
 		E9DD6FBC1AC459A8002310C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E9DD6FBD1AC459A8002310C4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E9DD6FC01AC459A8002310C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9DD6FC01AC459A8002310C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainV2.storyboard; sourceTree = "<group>"; };
 		E9DD6FC21AC459A8002310C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E9DD6FC51AC459A8002310C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E9DD6FCB1AC459A8002310C4 /* OrgasmometerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrgasmometerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,7 +87,7 @@
 				E9DD6FB71AC459A8002310C4 /* AppDelegate.m */,
 				E9DD6FBC1AC459A8002310C4 /* ViewController.h */,
 				E9DD6FBD1AC459A8002310C4 /* ViewController.m */,
-				E9DD6FBF1AC459A8002310C4 /* Main.storyboard */,
+				E9DD6FBF1AC459A8002310C4 /* MainV2.storyboard */,
 				E9DD6FC21AC459A8002310C4 /* Images.xcassets */,
 				E9DD6FC41AC459A8002310C4 /* LaunchScreen.xib */,
 				E9DD6FB91AC459A8002310C4 /* Orgasmometer.xcdatamodeld */,
@@ -202,7 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9DD6FC11AC459A8002310C4 /* Main.storyboard in Resources */,
+				E9DD6FC11AC459A8002310C4 /* MainV2.storyboard in Resources */,
 				E9DD6FC61AC459A8002310C4 /* LaunchScreen.xib in Resources */,
 				E9DD6FC31AC459A8002310C4 /* Images.xcassets in Resources */,
 			);
@@ -248,12 +248,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E9DD6FBF1AC459A8002310C4 /* Main.storyboard */ = {
+		E9DD6FBF1AC459A8002310C4 /* MainV2.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E9DD6FC01AC459A8002310C4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainV2.storyboard;
 			sourceTree = "<group>";
 		};
 		E9DD6FC41AC459A8002310C4 /* LaunchScreen.xib */ = {
