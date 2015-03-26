@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIImage *originalImage = [UIImage imageNamed:@"background.png"];
+    CGSize destinationSize = CGSizeMake(375, 667);
+    UIGraphicsBeginImageContext(destinationSize);
+    [originalImage drawInRect:CGRectMake(0,0,destinationSize.width,destinationSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageView *New = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
+    New.image = newImage;
+    [self.mainView addSubview:New];
+        
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,6 +10,13 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UIView *mainView;
+@property (nonatomic, strong) IBOutlet UILabel *counter;
+@property (nonatomic, strong) IBOutlet UIButton *orgasmButton;
+@property (nonatomic, strong) IBOutlet UISlider *intensitySlider;
+@property (nonatomic, strong) IBOutlet UIButton *menuButton;
+@property (nonatomic, strong) IBOutlet UIButton *statisticsButton;
+
 
 @end
 
