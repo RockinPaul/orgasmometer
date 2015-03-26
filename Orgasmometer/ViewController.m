@@ -27,7 +27,7 @@
     UIImageView *New = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 375, 667)];
     New.image = newImage;
     [self.mainView addSubview:New];
-        
+    
 }
 
 - (void)didReceiveMemoryWarning {
