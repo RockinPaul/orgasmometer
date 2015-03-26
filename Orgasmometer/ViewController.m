@@ -35,9 +35,11 @@
 }
 
 - (void)orgasm:(UIButton *)sender {
+    
     NSLog(@"orgasm");
     self.count += 1;
     [self.counterLabel setText: [NSString stringWithFormat: @"%li", self.count]];
+    
 }
 
 - (void)didReceiveMemoryWarning {
