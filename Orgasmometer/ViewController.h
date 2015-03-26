@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ViewController : UIViewController
 
@@ -16,7 +17,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *menuButton;
 @property (nonatomic, strong) IBOutlet UIButton *statisticsButton;
 @property (nonatomic, strong) IBOutlet UILabel *counterLabel;
-@property (nonatomic) IBOutlet long count;
+@property (nonatomic) long count;
 
 - (IBAction)orgasm:(UIButton *)sender;
 

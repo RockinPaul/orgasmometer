@@ -36,9 +36,17 @@
 
 - (void)orgasm:(UIButton *)sender {
     
-    NSLog(@"orgasm");
     self.count += 1;
     [self.counterLabel setText: [NSString stringWithFormat: @"%li", self.count]];
+    NSInteger roundedSliderValue = round(self.intensitySlider.value);
+    
+    PFObject *orgasm = [PFObject objectWithClassName:@"Orgasm"];
+    orgasm[@"intensity"] = [NSString stringWithFormat: @"%ld", roundedSliderValue];
+    
+    [orgasm saveInBackground];
+    
+    NSLog(@"orgasm");
+    NSLog(@"%ld", (long)roundedSliderValue);
     
 }
 
