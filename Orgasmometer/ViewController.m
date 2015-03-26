@@ -42,7 +42,6 @@
     
     PFObject *orgasm = [PFObject objectWithClassName:@"Orgasm"];
     orgasm[@"intensity"] = [NSString stringWithFormat: @"%ld", roundedSliderValue];
-    
     [orgasm saveInBackground];
     
     NSLog(@"orgasm");

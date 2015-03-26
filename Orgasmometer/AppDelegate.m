@@ -25,9 +25,15 @@
     // Initialize Parse.
     [Parse setApplicationId:@"tXUnb0ZfM1BfZKQbDbbXfD0GrWPpFRectQROSs6E"
                   clientKey:@"eamDGZR9qN3HV5uVqpLrDRFsWq1V1J5N322Wq3uM"];
-    
+
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainV2" bundle:nil];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"sign_up"];
+    self.window.rootViewController = viewController;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
