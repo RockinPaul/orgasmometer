@@ -13,6 +13,8 @@
 @implementation SignUpViewController
 
 - (void)viewDidLoad {
+    // Log out for testing
+    [PFUser logOut];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

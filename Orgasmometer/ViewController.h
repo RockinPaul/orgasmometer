@@ -21,5 +21,7 @@
 
 - (IBAction)orgasm:(UIButton *)sender;
 
+- (void)showCount;
+
 @end
 

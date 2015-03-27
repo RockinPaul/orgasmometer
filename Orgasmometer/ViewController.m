@@ -30,9 +30,27 @@
     self.intensitySlider.continuous = YES;
     self.intensitySlider.value = 50.0;
     
-    self.count = 0;
+    [self showCount];
     
 }
+
+- (void)showCount {
+    PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
+    [query fromLocalDatastore];
+    [query whereKey:@"user" equalTo: [PFUser currentUser]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            [PFObject pinAll:objects];
+            self.count = [objects count];
+            [self.counterLabel setText: [NSString stringWithFormat:@"%li", self.count]];
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
 
 - (void)orgasm:(UIButton *)sender {
     
@@ -40,9 +58,13 @@
     [self.counterLabel setText: [NSString stringWithFormat: @"%li", self.count]];
     NSInteger roundedSliderValue = round(self.intensitySlider.value);
     
+    NSMutableArray *objects = [[NSMutableArray alloc] init];
     PFObject *orgasm = [PFObject objectWithClassName:@"Orgasm"];
     orgasm[@"intensity"] = [NSString stringWithFormat: @"%ld", roundedSliderValue];
+    orgasm[@"user"] = [PFUser currentUser];
+    [objects addObject:orgasm];
     [orgasm saveInBackground];
+    [PFObject pinAll:objects];
     
     NSLog(@"orgasm");
     NSLog(@"%ld", (long)roundedSliderValue);
