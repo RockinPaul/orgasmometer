@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91143DD1AC71F960040D98D /* libAmChartsMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E91143D91AC71F580040D98D /* libAmChartsMobile.a */; };
 		E9DD6FB51AC459A8002310C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB41AC459A8002310C4 /* main.m */; };
 		E9DD6FB81AC459A8002310C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB71AC459A8002310C4 /* AppDelegate.m */; };
 		E9DD6FBB1AC459A8002310C4 /* Orgasmometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB91AC459A8002310C4 /* Orgasmometer.xcdatamodeld */; };
@@ -42,6 +43,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E91143D21AC71F580040D98D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1151A491190E9E5A004D52EC;
+			remoteInfo = AmChartsLibrary;
+		};
+		E91143D41AC71F580040D98D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 111DF6EE1917C92100E11137;
+			remoteInfo = "AmCharts iOS Example";
+		};
+		E91143D61AC71F580040D98D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 110386721912881900F917CE;
+			remoteInfo = AmCharts;
+		};
+		E91143D81AC71F580040D98D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 111DF7281917C94F00E11137;
+			remoteInfo = AmChartsMobile;
+		};
+		E91143DA1AC71F580040D98D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 111DF8151917E3C700E11137;
+			remoteInfo = AmChartResources;
+		};
 		E9DD6FCC1AC459A8002310C4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9DD6FA71AC459A7002310C4 /* Project object */;
@@ -52,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmChartsLibrary.xcodeproj; path = "AmCharts-master/AmChartsLibrary.xcodeproj"; sourceTree = "<group>"; };
 		E9DD6FAF1AC459A8002310C4 /* Orgasmometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orgasmometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DD6FB31AC459A8002310C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9DD6FB41AC459A8002310C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E91143DD1AC71F960040D98D /* libAmChartsMobile.a in Frameworks */,
 				E9DD70041AC4B44A002310C4 /* Social.framework in Frameworks */,
 				E9DD70021AC4B41C002310C4 /* Accounts.framework in Frameworks */,
 				E9DD6FFD1AC4A371002310C4 /* libsqlite3.dylib in Frameworks */,
@@ -134,9 +172,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E91143CB1AC71F570040D98D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E91143D31AC71F580040D98D /* AmChartsLibrary.app */,
+				E91143D51AC71F580040D98D /* AmCharts iOS Example.app */,
+				E91143D71AC71F580040D98D /* AmCharts.framework */,
+				E91143D91AC71F580040D98D /* libAmChartsMobile.a */,
+				E91143DB1AC71F580040D98D /* AmChartResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E9DD6FA61AC459A7002310C4 = {
 			isa = PBXGroup;
 			children = (
+				E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */,
 				E9E19A161AC604AD00F3BF52 /* Classes */,
 				E9DD70031AC4B44A002310C4 /* Social.framework */,
 				E9DD70011AC4B41C002310C4 /* Accounts.framework */,
@@ -306,6 +357,12 @@
 			mainGroup = E9DD6FA61AC459A7002310C4;
 			productRefGroup = E9DD6FB01AC459A8002310C4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E91143CB1AC71F570040D98D /* Products */;
+					ProjectRef = E91143CA1AC71F570040D98D /* AmChartsLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E9DD6FAE1AC459A8002310C4 /* Orgasmometer */,
@@ -313,6 +370,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E91143D31AC71F580040D98D /* AmChartsLibrary.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = AmChartsLibrary.app;
+			remoteRef = E91143D21AC71F580040D98D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E91143D51AC71F580040D98D /* AmCharts iOS Example.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "AmCharts iOS Example.app";
+			remoteRef = E91143D41AC71F580040D98D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E91143D71AC71F580040D98D /* AmCharts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AmCharts.framework;
+			remoteRef = E91143D61AC71F580040D98D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E91143D91AC71F580040D98D /* libAmChartsMobile.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libAmChartsMobile.a;
+			remoteRef = E91143D81AC71F580040D98D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E91143DB1AC71F580040D98D /* AmChartResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AmChartResources.bundle;
+			remoteRef = E91143DA1AC71F580040D98D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E9DD6FAD1AC459A8002310C4 /* Resources */ = {

@@ -11,9 +11,11 @@
 #endif
 
 #import <UIKit/UIKit.h>
+#import <AmChartsMobile/AmCharts.h>
 
 @interface PlotViewController : UIViewController
 
-@property (nonatomic, strong) IBOutlet UIView *plotView;
+//@property (nonatomic, strong) IBOutlet UIView *plotView;
+@property (nonatomic, strong) AmMobileChartView *chartView;
 
 @end
