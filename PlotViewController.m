@@ -14,10 +14,6 @@
 - (void)viewDidAppear:(BOOL)animated {
     [self viewDidAppear:YES];
     
-    JBBarChartView *barChartView = [[JBBarChartView alloc] init];
-    barChartView.dataSource = self;
-    barChartView.delegate = self;
-    [self addSubview:barChartView];
 }
 
 

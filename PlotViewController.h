@@ -11,11 +11,8 @@
 #endif
 
 #import <UIKit/UIKit.h>
-#import "JBChartView.h"
-#import "JBBarChartView.h"
-#import "JBLineChartView.h"
 
-@interface PlotViewController : JBBarChartView
+@interface PlotViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UIView *plotView;
 
