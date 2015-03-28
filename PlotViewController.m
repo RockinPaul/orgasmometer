@@ -11,28 +11,67 @@
 
 @implementation PlotViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self viewDidAppear:YES];
+- (void)viewDidLoad {
     
-    [self.view addSubview:self.chartView];
+    self.chartView = [[JBChartView alloc] init];
+    self.chartView.delegate = self;
+    self.chartView.dataSource = self;
+    self.chartView.state = 0;
+    self.chartView.backgroundColor = [UIColor blackColor];
     
-    AmPieChart *pieChart = [[AmPieChart alloc] init];
-    pieChart.type = @"pie";
-    pieChart.theme = @"none";
-    NSMutableArray *dataProvider = [[NSMutableArray alloc] init];
-    [dataProvider addObject:@{@"country" : @"Lithuania", @"litres" : @(501.9)}];
-    [dataProvider addObject:@{@"country" : @"Czech Republic", @"litres" : @(301.9)}];
-    [dataProvider addObject:@{@"country" : @"Ireland", @"litres" : @(201.1)}];
-    pieChart.dataProvider = dataProvider;
+    self.chartView.frame = CGRectMake(0, 94, 320, 300);
     
-    pieChart.valueField = @"litres";
-    pieChart.titleField = @"country";
+    // THIS IS THE VIEW WHEN THE USER INTERACTS WITH THE CHART
+    /*
+     _informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(0, 0, 40, 300)];
+     [_informationView setBackgroundColor:[UIColor grayColor]];*/
     
-    // where self.chartView references an AmChartView *
-    [self.chartView setChart:pieChart];
-    [self.chartView drawChart];
     
+    [self.chartView setMinimumValue:1.0f];
+    [self.chartView setMaximumValue:20.0f];
+    
+    //    [self.view addSubview:_informationView];
+    [self.chartView reloadData];
+    
+    [self.plotView addSubview:self.chartView];
+    [super viewDidLoad];
 }
 
+- (void) initData
+{
+    self.testArray1 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(10)];
+    self.testArray2 = @[@(11), @(12), @(13), @(14), @(15), @(16), @(17), @(18), @(19), @(20)];
+}
+
+- (NSUInteger)numberOfLinesInLineChartView:(JBChartView *)chartView;
+{
+    return 3;
+}
+
+- (BOOL)lineChartView:(JBLineChartView *)lineChartView showsDotsForLineAtLineIndex:(NSUInteger)lineIndex;
+{
+    return YES;
+}
+
+
+- (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex;
+{
+    return self.testArray1.count;
+}
+
+- (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex;
+{
+    if (lineIndex == 1)
+    {
+        NSNumber *value = (NSNumber *)[self.testArray1 objectAtIndex:horizontalIndex];
+        return [value floatValue];
+    }
+    else
+    {
+        NSNumber *value = (NSNumber *)[self.testArray2 objectAtIndex:horizontalIndex];
+        return [value floatValue];
+    }
+    return 0;
+}
 
 @end

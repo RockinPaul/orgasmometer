@@ -11,11 +11,16 @@
 #endif
 
 #import <UIKit/UIKit.h>
-#import <AmChartsMobile/AmCharts.h>
+#import "JBBarChartView.h"
+#import "JBLineChartView.h"
+#import "JBChartView.h"
 
-@interface PlotViewController : UIViewController
+@interface PlotViewController : UIViewController <JBChartViewDelegate, JBChartViewDataSource>
 
 //@property (nonatomic, strong) IBOutlet UIView *plotView;
-@property (nonatomic, strong) AmMobileChartView *chartView;
+@property (nonatomic, strong) IBOutlet UIView *plotView;
+@property (nonatomic, strong) JBChartView *chartView;
+@property (nonatomic, strong) NSArray *testArray1;
+@property (nonatomic, strong) NSArray *testArray2;
 
 @end

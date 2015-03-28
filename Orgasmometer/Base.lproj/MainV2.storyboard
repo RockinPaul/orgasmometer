@@ -92,7 +92,7 @@
         <!--Plot View Controller-->
         <scene sceneID="uZc-8W-z6R">
             <objects>
-                <viewController id="pxq-5M-Gaf" customClass="PlotViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="plot" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pxq-5M-Gaf" customClass="PlotViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S6W-hL-LPm"/>
                         <viewControllerLayoutGuide type="bottom" id="PbI-cV-bVj"/>
@@ -103,11 +103,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXc-gY-Ye7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOM-8U-f0G">
+                                        <rect key="frame" x="37" y="60" width="300" height="300"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.9221711722" green="0.3313795906" blue="0.49688714880000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="plotView" destination="nOM-8U-f0G" id="FGW-10-qIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMp-SK-xPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

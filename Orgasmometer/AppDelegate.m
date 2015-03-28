@@ -31,7 +31,9 @@
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainV2" bundle:nil];
-    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"sign_up"];
+    //UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"sign_up"];
+    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier: @"plot"];
+
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     
