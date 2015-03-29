@@ -38,7 +38,17 @@
     
     // TODO: ADD YEAR CONTROLL
     NSDate *loopDate = [self dateWithYear:2015 month:month day:1]; // the start date you are looping from
-    NSDate *endDate = [self dateWithYear:2015 month:month day:31];
+    NSDate *endDate;
+    
+    // Changing days number in month
+    if ((month == 1) || (month == 3) || (month == 5) || (month == 7) || (month == 8) || (month == 10) || (month == 12)) {
+       endDate = [self dateWithYear:2015 month:month day:31 + 1];
+    } else if (month == 2) {
+        endDate = [self dateWithYear:2015 month:month day:28 + 1];
+    } else {
+        endDate = [self dateWithYear:2015 month:month day:30 + 1];
+    }
+    
     NSCalendar *currentCalendar = [NSCalendar currentCalendar];
     currentCalendar.firstWeekday = 1; // Sunday
     [currentCalendar rangeOfUnit:NSCalendarUnitDay startDate:&loopDate interval:NULL forDate:loopDate];
@@ -46,10 +56,12 @@
     NSDateComponents *oneDay = [NSDateComponents new];
     oneDay.day = 1;
     
+    int i = 1;
     while ([loopDate compare: endDate] == NSOrderedAscending) {
         loopDate = [currentCalendar dateByAddingComponents:oneDay toDate:loopDate options:0];
         // Do something with the date
         NSLog(@"%@", loopDate);
+        NSLog(@"%i", i++);
     }
 
 }
