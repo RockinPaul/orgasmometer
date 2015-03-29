@@ -17,8 +17,8 @@
 
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
+@property (nonatomic, strong) NSMutableArray *dates;
 
-@property (nonatomic, strong) NSMutableArray *day;
 @property (nonatomic, strong) NSMutableArray *month;
 @property (nonatomic, strong) NSMutableArray *year;
 

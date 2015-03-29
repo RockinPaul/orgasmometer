@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "OrgasmData.h"
 
+@interface DatePair : NSObject
+@property (nonatomic, strong) NSDate *firstDate;
+@property (nonatomic, strong) NSDate *secondDate;
+@end
+
+@implementation DatePair
+@synthesize firstDate, secondDate;
+@end
+
 @implementation OrgasmData
 
 - (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
@@ -40,6 +49,8 @@
     NSDate *loopDate = [self dateWithYear:2015 month:month day:1]; // the start date you are looping from
     NSDate *endDate;
     
+    self.dates = [[NSMutableArray alloc] init];
+    
     // Changing days number in month
     if ((month == 1) || (month == 3) || (month == 5) || (month == 7) || (month == 8) || (month == 10) || (month == 12)) {
        endDate = [self dateWithYear:2015 month:month day:31 + 1];
@@ -61,11 +72,13 @@
         loopDate = [currentCalendar dateByAddingComponents:oneDay toDate:loopDate options:0];
         // Do something with the date
         NSLog(@"%@", loopDate);
-        NSLog(@"%i", i++);
-        
-        
+        NSLog(@"%i", i);
+        NSDate *nextDay = [self dateWithYear:2015 month:month day:i+1];
+        [self.dates addObject:[NSNumber numberWithInt:i]];
+        i++;
     }
     
+    NSLog(@"%@", [self.dates description]);
     // Parse including
     
 
