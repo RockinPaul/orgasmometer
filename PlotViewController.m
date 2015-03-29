@@ -13,13 +13,14 @@
 
 - (void)viewDidLoad {
     
-    self.chartView = [[JBChartView alloc] init];
+    self.chartView = [[JBLineChartView alloc] init];
     self.chartView.delegate = self;
     self.chartView.dataSource = self;
     self.chartView.state = 0;
-    self.chartView.backgroundColor = [UIColor blackColor];
+    self.chartView.backgroundColor = [UIColor whiteColor];
     
-    self.chartView.frame = CGRectMake(0, 94, 320, 300);
+    [self initData];
+    self.chartView.frame = CGRectMake(-10, 94, 320, 300);
     
     // THIS IS THE VIEW WHEN THE USER INTERACTS WITH THE CHART
     /*
@@ -31,9 +32,9 @@
     [self.chartView setMaximumValue:20.0f];
     
     //    [self.view addSubview:_informationView];
-    [self.chartView reloadData];
     
     [self.plotView addSubview:self.chartView];
+    [self.chartView reloadData];
     [super viewDidLoad];
 }
 
@@ -41,16 +42,17 @@
 {
     self.testArray1 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(10)];
     self.testArray2 = @[@(11), @(12), @(13), @(14), @(15), @(16), @(17), @(18), @(19), @(20)];
+    NSLog(@"Number");
 }
 
 - (NSUInteger)numberOfLinesInLineChartView:(JBChartView *)chartView;
 {
-    return 3;
+    return 1;
 }
 
 - (BOOL)lineChartView:(JBLineChartView *)lineChartView showsDotsForLineAtLineIndex:(NSUInteger)lineIndex;
 {
-    return YES;
+    return NO;
 }
 
 
@@ -71,6 +73,7 @@
         NSNumber *value = (NSNumber *)[self.testArray2 objectAtIndex:horizontalIndex];
         return [value floatValue];
     }
+
     return 0;
 }
 

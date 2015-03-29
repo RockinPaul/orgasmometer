@@ -15,11 +15,11 @@
 #import "JBLineChartView.h"
 #import "JBChartView.h"
 
-@interface PlotViewController : UIViewController <JBChartViewDelegate, JBChartViewDataSource>
+@interface PlotViewController : UIViewController <JBLineChartViewDelegate, JBLineChartViewDataSource>
 
 //@property (nonatomic, strong) IBOutlet UIView *plotView;
 @property (nonatomic, strong) IBOutlet UIView *plotView;
-@property (nonatomic, strong) JBChartView *chartView;
+@property (nonatomic, strong) JBLineChartView *chartView;
 @property (nonatomic, strong) NSArray *testArray1;
 @property (nonatomic, strong) NSArray *testArray2;
 
