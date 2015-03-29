@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PlotViewController.h"
+#import "GridView.h"
 
 @implementation PlotViewController
 
@@ -17,36 +18,42 @@
     self.chartView.delegate = self;
     self.chartView.dataSource = self;
     self.chartView.state = 0;
-    self.chartView.backgroundColor = [UIColor grayColor];
+    self.chartView.backgroundColor = [UIColor clearColor];
     
     [self initData];
     
-    self.chartView.frame = CGRectMake(-10, 94, 320, 300);
+    self.chartView.frame = CGRectMake(28, 94, 320, 250);
     
-    // THIS IS THE VIEW WHEN THE USER INTERACTS WITH THE CHART
-    /*
-     _informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(0, 0, 40, 300)];
-     [_informationView setBackgroundColor:[UIColor grayColor]];*/
-    
-    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(-10, 100, 320, 15)];
+    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(0, 100, 320, 15)];
     footerView.backgroundColor = [UIColor clearColor];
     footerView.leftLabel.text = @"Sunday";
     footerView.leftLabel.textColor = [UIColor redColor];
     footerView.rightLabel.text = @"Saturday";
     footerView.rightLabel.textColor = [UIColor redColor];
     footerView.sectionCount = [self.testArray1 count];
-    self.chartView.footerView = footerView;
+    footerView.footerSeparatorColor = [UIColor clearColor];
     
+    self.chartView.footerView = footerView;
     
     [self.chartView setMinimumValue:1.0f];
     [self.chartView setMaximumValue:20.0f];
     
+    
+    // TODO set grid for various tabs
+    GridView *gridView = [[GridView alloc] initWithFrame:CGRectMake(30, 94, 320, 250)];
+    gridView.numberOfColumns = 8;
+    gridView.numberOfRows = 0;
+    [gridView setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:gridView];
+    [gridView setNeedsDisplay];
+
     //    [self.view addSubview:_informationView];
     
-    [self.plotView addSubview:self.chartView];
+    [self.view addSubview:self.chartView];
     [self.chartView reloadData];
     [super viewDidLoad];
 }
+
 
 - (void) initData
 {
