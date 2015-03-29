@@ -14,8 +14,8 @@
 - (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
     
     // TEST OBJ
-    startDate = [self dateWithYear:2015 month:3 day:22];
-    endDate = [self dateWithYear:2015 month:3 day:30];
+//    startDate = [self dateWithYear:2015 month:3 day:22];
+//    endDate = [self dateWithYear:2015 month:3 day:30];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
     //[query fromLocalDatastore];
@@ -62,7 +62,12 @@
         // Do something with the date
         NSLog(@"%@", loopDate);
         NSLog(@"%i", i++);
+        
+        
     }
+    
+    // Parse including
+    
 
 }
      

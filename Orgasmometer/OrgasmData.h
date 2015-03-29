@@ -18,17 +18,13 @@
 @property (nonatomic, strong) NSDate *startDate;
 @property (nonatomic, strong) NSDate *endDate;
 
-@property (nonatomic, strong) NSArray *day;
-@property (nonatomic, strong) NSArray *month;
-@property (nonatomic, strong) NSArray *year;
+@property (nonatomic, strong) NSMutableArray *day;
+@property (nonatomic, strong) NSMutableArray *month;
+@property (nonatomic, strong) NSMutableArray *year;
 
-@property (nonatomic, strong) NSArray *dayCount;
-@property (nonatomic, strong) NSArray *monthCount;
-@property (nonatomic, strong) NSArray *yearCount;
-
-@property (nonatomic, strong) NSArray *dayIntensity;
-@property (nonatomic, strong) NSArray *monthIntensity;
-@property (nonatomic, strong) NSArray *yearIntensity;
+@property (nonatomic, strong) NSMutableArray *dayIntensity;
+@property (nonatomic, strong) NSMutableArray *monthIntensity;
+@property (nonatomic, strong) NSMutableArray *yearIntensity;
 
 
 - (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
