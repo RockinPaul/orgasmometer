@@ -31,8 +31,9 @@
 @property (nonatomic, strong) NSArray *yearIntensity;
 
 
-- (NSArray *)setDayDataForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
-- (NSArray *)setMonthDataForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
+- (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
+
+- (void)setMonthDataForMonth:(int)month;
 - (NSArray *)setYearDataForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
 
 - (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;

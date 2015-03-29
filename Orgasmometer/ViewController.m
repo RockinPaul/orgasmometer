@@ -52,7 +52,8 @@
     }];
     
     OrgasmData *orgasmData = [[OrgasmData alloc] init];
-    [orgasmData setDayDataForStartDate:nil andEndDate:nil];
+    [orgasmData setMonthDataForMonth:3];
+//    [orgasmData setDayDataForStartDate:nil andEndDate:nil];
 }
 
 

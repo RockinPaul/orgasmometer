@@ -11,9 +11,7 @@
 
 @implementation OrgasmData
 
-- (NSArray *)setDayDataForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
-    
-    self.day = [[NSArray alloc] init];
+- (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
     
     // TEST OBJ
     startDate = [self dateWithYear:2015 month:3 day:22];
@@ -34,8 +32,26 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+}
+
+-  (void)setMonthDataForMonth:(int)month {
     
-    return self.day;
+    // TODO: ADD YEAR CONTROLL
+    NSDate *loopDate = [self dateWithYear:2015 month:month day:1]; // the start date you are looping from
+    NSDate *endDate = [self dateWithYear:2015 month:month day:31];
+    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+    currentCalendar.firstWeekday = 1; // Sunday
+    [currentCalendar rangeOfUnit:NSCalendarUnitDay startDate:&loopDate interval:NULL forDate:loopDate];
+    
+    NSDateComponents *oneDay = [NSDateComponents new];
+    oneDay.day = 1;
+    
+    while ([loopDate compare: endDate] == NSOrderedAscending) {
+        loopDate = [currentCalendar dateByAddingComponents:oneDay toDate:loopDate options:0];
+        // Do something with the date
+        NSLog(@"%@", loopDate);
+    }
+
 }
      
 - (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
