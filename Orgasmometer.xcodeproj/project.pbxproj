@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E91143F01AC807B50040D98D /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91143EC1AC807B50040D98D /* JBBarChartFooterView.m */; };
+		E91143F11AC807B50040D98D /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91143EE1AC807B50040D98D /* JBLineChartFooterView.m */; };
 		E9DD6FB51AC459A8002310C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB41AC459A8002310C4 /* main.m */; };
 		E9DD6FB81AC459A8002310C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB71AC459A8002310C4 /* AppDelegate.m */; };
 		E9DD6FBB1AC459A8002310C4 /* Orgasmometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB91AC459A8002310C4 /* Orgasmometer.xcdatamodeld */; };
@@ -52,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E91143EB1AC807B50040D98D /* JBBarChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBBarChartFooterView.h; sourceTree = "<group>"; };
+		E91143EC1AC807B50040D98D /* JBBarChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBBarChartFooterView.m; sourceTree = "<group>"; };
+		E91143ED1AC807B50040D98D /* JBLineChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartFooterView.h; sourceTree = "<group>"; };
+		E91143EE1AC807B50040D98D /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartFooterView.m; sourceTree = "<group>"; };
 		E9DD6FAF1AC459A8002310C4 /* Orgasmometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orgasmometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DD6FB31AC459A8002310C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9DD6FB41AC459A8002310C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -229,6 +235,10 @@
 		E9E19A161AC604AD00F3BF52 /* Jawbone */ = {
 			isa = PBXGroup;
 			children = (
+				E91143EB1AC807B50040D98D /* JBBarChartFooterView.h */,
+				E91143EC1AC807B50040D98D /* JBBarChartFooterView.m */,
+				E91143ED1AC807B50040D98D /* JBLineChartFooterView.h */,
+				E91143EE1AC807B50040D98D /* JBLineChartFooterView.m */,
 				E9E19A171AC604AD00F3BF52 /* JBBarChartView.h */,
 				E9E19A181AC604AD00F3BF52 /* JBBarChartView.m */,
 				E9E19A191AC604AD00F3BF52 /* JBChartView.h */,
@@ -342,6 +352,7 @@
 			files = (
 				E9DD6FB81AC459A8002310C4 /* AppDelegate.m in Sources */,
 				E9DD6FFF1AC4AFA0002310C4 /* SignUpViewController.m in Sources */,
+				E91143F11AC807B50040D98D /* JBLineChartFooterView.m in Sources */,
 				E9DD6FB51AC459A8002310C4 /* main.m in Sources */,
 				E9E19A1E1AC604AD00F3BF52 /* JBChartView.m in Sources */,
 				E9E19A1D1AC604AD00F3BF52 /* JBBarChartView.m in Sources */,
@@ -349,6 +360,7 @@
 				E9DD6FBE1AC459A8002310C4 /* ViewController.m in Sources */,
 				E9DD6FBB1AC459A8002310C4 /* Orgasmometer.xcdatamodeld in Sources */,
 				E9E19A211AC604F400F3BF52 /* PlotViewController.m in Sources */,
+				E91143F01AC807B50040D98D /* JBBarChartFooterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

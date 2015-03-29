@@ -20,12 +20,22 @@
     self.chartView.backgroundColor = [UIColor grayColor];
     
     [self initData];
+    
     self.chartView.frame = CGRectMake(-10, 94, 320, 300);
     
     // THIS IS THE VIEW WHEN THE USER INTERACTS WITH THE CHART
     /*
      _informationView = [[JBChartInformationView alloc] initWithFrame:CGRectMake(0, 0, 40, 300)];
      [_informationView setBackgroundColor:[UIColor grayColor]];*/
+    
+    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(-10, 100, 320, 15)];
+    footerView.backgroundColor = [UIColor clearColor];
+    footerView.leftLabel.text = @"Sunday";
+    footerView.leftLabel.textColor = [UIColor redColor];
+    footerView.rightLabel.text = @"Saturday";
+    footerView.rightLabel.textColor = [UIColor redColor];
+    footerView.sectionCount = [self.testArray1 count];
+    self.chartView.footerView = footerView;
     
     
     [self.chartView setMinimumValue:1.0f];
@@ -57,17 +67,17 @@
     return JBLineChartViewLineStyleSolid;
 }
 
-
-// Show dots or not
-- (BOOL)lineChartView:(JBLineChartView *)lineChartView showsDotsForLineAtLineIndex:(NSUInteger)lineIndex;
+// Line width
+- (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return NO;
+    return 8.0;
 }
-// Dots color
-//- (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForDotAtHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
-//{
-//    return [UIColor yellowColor];
-//}
+
+// Line smooth
+- (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
+{
+    return YES;
+}
 
 
 // Number of vertical values

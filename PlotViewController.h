@@ -14,6 +14,7 @@
 #import "JBBarChartView.h"
 #import "JBLineChartView.h"
 #import "JBChartView.h"
+#include "JBLineChartFooterView.h"
 
 @interface PlotViewController : UIViewController <JBLineChartViewDelegate, JBLineChartViewDataSource>
 
