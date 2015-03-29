@@ -9,15 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "OrgasmData.h"
 
-@interface DatePair : NSObject
-@property (nonatomic, strong) NSDate *firstDate;
-@property (nonatomic, strong) NSDate *secondDate;
-@end
-
-@implementation DatePair
-@synthesize firstDate, secondDate;
-@end
-
 @implementation OrgasmData
 
 - (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
@@ -26,30 +17,44 @@
 //    startDate = [self dateWithYear:2015 month:3 day:22];
 //    endDate = [self dateWithYear:2015 month:3 day:30];
     
+    self.month = [[NSMutableArray alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
     //[query fromLocalDatastore];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
-    [query whereKey:@"createdAt" greaterThan:startDate];
-    [query whereKey:@"createdAt" lessThan:endDate];
+//    [query whereKey:@"createdAt" greaterThan:startDate];
+//    [query whereKey:@"createdAt" lessThan:endDate];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
+            
             [PFObject pinAll:objects];
+            NSLog(@"%i dates", [self.dates count]);
+            for (NSDate* date in self.dates) {
+                int i = 0;
+                for (PFObject *object in objects) {
+                    if ([self onlyDateFromDate:object.createdAt] == [self onlyDateFromDate:date]) {
+                        NSLog(@"%i YES", i);
+                        i++;
+                    }
+                }
+                [self.month addObject:[NSNumber numberWithInt:i]];
+            }
             NSLog(@"%lu", (unsigned long)[objects count]);
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
+        NSLog(@"%@", [self.month description]);
     }];
 }
 
 -  (void)setMonthDataForMonth:(int)month {
     
+    self.dates = [[NSMutableArray alloc] init];
+    
     // TODO: ADD YEAR CONTROLL
     NSDate *loopDate = [self dateWithYear:2015 month:month day:1]; // the start date you are looping from
     NSDate *endDate;
-    
-    self.dates = [[NSMutableArray alloc] init];
     
     // Changing days number in month
     if ((month == 1) || (month == 3) || (month == 5) || (month == 7) || (month == 8) || (month == 10) || (month == 12)) {
@@ -73,15 +78,23 @@
         // Do something with the date
         NSLog(@"%@", loopDate);
         NSLog(@"%i", i);
-        NSDate *nextDay = [self dateWithYear:2015 month:month day:i+1];
-        [self.dates addObject:[NSNumber numberWithInt:i]];
+        [self.dates addObject:loopDate];
         i++;
     }
     
-    NSLog(@"%@", [self.dates description]);
     // Parse including
-    
+    [self getOrgasmsCountForStartDate:loopDate andEndDate:loopDate];
 
+}
+
+- (NSDate *)onlyDateFromDate:(NSDate *)date {
+    unsigned int flags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+    
+    NSDateComponents* components = [calendar components:flags fromDate:date];
+    NSDate* dateOnly = [calendar dateFromComponents:components];
+    
+    return dateOnly;
 }
      
 - (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day {
@@ -90,6 +103,7 @@
     [components setYear:year];
     [components setMonth:month];
     [components setDay:day];
+    
     return [calendar dateFromComponents:components];
 }
 
