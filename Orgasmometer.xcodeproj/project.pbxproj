@@ -10,6 +10,7 @@
 		E91143F01AC807B50040D98D /* JBBarChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91143EC1AC807B50040D98D /* JBBarChartFooterView.m */; };
 		E91143F11AC807B50040D98D /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91143EE1AC807B50040D98D /* JBLineChartFooterView.m */; };
 		E99CA6841AC81A1F006112EA /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E99CA6831AC81A1F006112EA /* GridView.m */; };
+		E99CA6871AC8310E006112EA /* OrgasmData.m in Sources */ = {isa = PBXBuildFile; fileRef = E99CA6861AC8310E006112EA /* OrgasmData.m */; };
 		E9DD6FB51AC459A8002310C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB41AC459A8002310C4 /* main.m */; };
 		E9DD6FB81AC459A8002310C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB71AC459A8002310C4 /* AppDelegate.m */; };
 		E9DD6FBB1AC459A8002310C4 /* Orgasmometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB91AC459A8002310C4 /* Orgasmometer.xcdatamodeld */; };
@@ -61,6 +62,8 @@
 		E91143EE1AC807B50040D98D /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartFooterView.m; sourceTree = "<group>"; };
 		E99CA6821AC819EA006112EA /* GridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridView.h; sourceTree = "<group>"; };
 		E99CA6831AC81A1F006112EA /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
+		E99CA6851AC82E15006112EA /* OrgasmData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrgasmData.h; sourceTree = "<group>"; };
+		E99CA6861AC8310E006112EA /* OrgasmData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgasmData.m; sourceTree = "<group>"; };
 		E9DD6FAF1AC459A8002310C4 /* Orgasmometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orgasmometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DD6FB31AC459A8002310C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9DD6FB41AC459A8002310C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				E9E19A201AC604F400F3BF52 /* PlotViewController.m */,
 				E99CA6821AC819EA006112EA /* GridView.h */,
 				E99CA6831AC81A1F006112EA /* GridView.m */,
+				E99CA6851AC82E15006112EA /* OrgasmData.h */,
+				E99CA6861AC8310E006112EA /* OrgasmData.m */,
 				E9DD6FBF1AC459A8002310C4 /* MainV2.storyboard */,
 				E9DD6FC21AC459A8002310C4 /* Images.xcassets */,
 				E9DD6FC41AC459A8002310C4 /* LaunchScreen.xib */,
@@ -363,6 +368,7 @@
 				E9E19A1D1AC604AD00F3BF52 /* JBBarChartView.m in Sources */,
 				E9E19A1F1AC604AD00F3BF52 /* JBLineChartView.m in Sources */,
 				E9DD6FBE1AC459A8002310C4 /* ViewController.m in Sources */,
+				E99CA6871AC8310E006112EA /* OrgasmData.m in Sources */,
 				E9DD6FBB1AC459A8002310C4 /* Orgasmometer.xcdatamodeld in Sources */,
 				E9E19A211AC604F400F3BF52 /* PlotViewController.m in Sources */,
 				E99CA6841AC81A1F006112EA /* GridView.m in Sources */,

@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     [self.intensitySlider setThumbImage: [UIImage imageNamed:@"slider_thumb.png"] forState:UIControlStateNormal];
@@ -49,6 +50,9 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
+    
+    OrgasmData *orgasmData = [[OrgasmData alloc] init];
+    [orgasmData setDayDataForStartDate:nil andEndDate:nil];
 }
 
 

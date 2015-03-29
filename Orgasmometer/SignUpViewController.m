@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad {
     // Log out for testing
-    [PFUser logOut];
+    //[PFUser logOut];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
