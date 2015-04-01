@@ -116,11 +116,13 @@
     if (lineIndex == 1)
     {
         NSNumber *value = (NSNumber *)[orgasmData.month objectAtIndex:horizontalIndex];
+        value = [NSNumber numberWithInt:[value intValue] + 4]; // for footer padding
         return [value floatValue];
     }
     else
     {
         NSNumber *value = (NSNumber *)[orgasmData.month objectAtIndex:horizontalIndex];
+        value = [NSNumber numberWithInt:[value intValue] + 4]; // for footer padding
         return [value floatValue];
     }
     
