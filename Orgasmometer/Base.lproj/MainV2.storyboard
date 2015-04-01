@@ -166,6 +166,9 @@
                                         <state key="normal" image="stat_button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="pxq-5M-Gaf" kind="show" id="7TK-fN-Q42"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.92217117216851974" green="0.33137959058350125" blue="0.49688714877477569" alpha="1" colorSpace="calibratedRGB"/>

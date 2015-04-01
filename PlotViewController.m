@@ -23,17 +23,20 @@
     self.chartView.state = 0;
     self.chartView.backgroundColor = [UIColor clearColor];
     
-    [self initData];
+//    [self initData];
     
     self.chartView.frame = CGRectMake(28, 94, 320, 250);
     
-    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(0, 100, 320, 15)];
+    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(0, 100, 325, 15)];
     footerView.backgroundColor = [UIColor clearColor];
     footerView.leftLabel.text = @"Sunday";
     footerView.leftLabel.textColor = [UIColor redColor];
     footerView.rightLabel.text = @"Saturday";
     footerView.rightLabel.textColor = [UIColor redColor];
     footerView.sectionCount = [orgasmData.month count];
+    
+    NSLog(@"%lu", (unsigned long)[orgasmData.month count]);
+    
     footerView.footerSeparatorColor = [UIColor blackColor];
     
     self.chartView.footerView = footerView;
@@ -60,8 +63,8 @@
 
 - (void) initData
 {
-    self.testArray1 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(10)];
-    self.testArray2 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(20)];
+//    self.testArray1 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(10)];
+//    self.testArray2 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(20)];
 }
 
 // Number of lines on plot
@@ -80,7 +83,7 @@
 // Line width
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
 {
-    return 8.0;
+    return 5.0;
 }
 
 // Line smooth
@@ -93,7 +96,8 @@
 // Number of vertical values
 - (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex;
 {
-    return self.testArray1.count;
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    return orgasmData.month.count;
 }
 
 
@@ -107,14 +111,16 @@
 // Vertical value for horizontal index
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex;
 {
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    
     if (lineIndex == 1)
     {
-        NSNumber *value = (NSNumber *)[self.testArray1 objectAtIndex:horizontalIndex];
+        NSNumber *value = (NSNumber *)[orgasmData.month objectAtIndex:horizontalIndex];
         return [value floatValue];
     }
     else
     {
-        NSNumber *value = (NSNumber *)[self.testArray2 objectAtIndex:horizontalIndex];
+        NSNumber *value = (NSNumber *)[orgasmData.month objectAtIndex:horizontalIndex];
         return [value floatValue];
     }
     
