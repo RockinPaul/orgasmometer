@@ -34,4 +34,7 @@
 
 - (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
 
+
++ (OrgasmData *) sharedInstance;
+
 @end

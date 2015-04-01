@@ -13,22 +13,16 @@
 
 - (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
     
-    // TEST OBJ
-//    startDate = [self dateWithYear:2015 month:3 day:22];
-//    endDate = [self dateWithYear:2015 month:3 day:30];
-    
     self.month = [[NSMutableArray alloc] init];
     PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
     //[query fromLocalDatastore];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
-//    [query whereKey:@"createdAt" greaterThan:startDate];
-//    [query whereKey:@"createdAt" lessThan:endDate];
-    
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
             [PFObject pinAll:objects];
-            NSLog(@"%i dates", [self.dates count]);
+            NSLog(@"%lu dates", (unsigned long)[self.dates count]);
             for (NSDate* date in self.dates) {
                 int i = 0;
                 for (PFObject *object in objects) {
@@ -107,5 +101,23 @@
     
     return [calendar dateFromComponents:components];
 }
+
+
+// Singleton implementation
++(OrgasmData *) sharedInstance {
+    static dispatch_once_t pred;
+    static OrgasmData *sharedInstance = nil;
+    dispatch_once(&pred, ^{
+        sharedInstance = [[OrgasmData alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (void)dealloc {
+    // implement -dealloc & remove abort() when refactoring for
+    // non-singleton use.
+    abort();
+}
+
 
 @end

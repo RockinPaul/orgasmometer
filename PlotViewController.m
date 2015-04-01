@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "PlotViewController.h"
 #import "GridView.h"
+#import "OrgasmData.h"
 
 @implementation PlotViewController
 
 - (void)viewDidLoad {
+    
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
     
     self.chartView = [[JBLineChartView alloc] init];
     self.chartView.delegate = self;
@@ -30,8 +33,8 @@
     footerView.leftLabel.textColor = [UIColor redColor];
     footerView.rightLabel.text = @"Saturday";
     footerView.rightLabel.textColor = [UIColor redColor];
-    footerView.sectionCount = [self.testArray1 count];
-    footerView.footerSeparatorColor = [UIColor clearColor];
+    footerView.sectionCount = [orgasmData.month count];
+    footerView.footerSeparatorColor = [UIColor blackColor];
     
     self.chartView.footerView = footerView;
     
@@ -39,13 +42,13 @@
     [self.chartView setMaximumValue:20.0f];
     
     
-    // TODO set grid for various tabs
-    GridView *gridView = [[GridView alloc] initWithFrame:CGRectMake(30, 94, 320, 250)];
-    gridView.numberOfColumns = 8;
-    gridView.numberOfRows = 0;
-    [gridView setBackgroundColor:[UIColor clearColor]];
-    [self.view addSubview:gridView];
-    [gridView setNeedsDisplay];
+//    // TODO set grid for various tabs
+//    GridView *gridView = [[GridView alloc] initWithFrame:CGRectMake(30, 94, 320, 250)];
+//    gridView.numberOfColumns = 8;
+//    gridView.numberOfRows = 0;
+//    [gridView setBackgroundColor:[UIColor clearColor]];
+//    [self.view addSubview:gridView];
+//    [gridView setNeedsDisplay];
 
     //    [self.view addSubview:_informationView];
     
