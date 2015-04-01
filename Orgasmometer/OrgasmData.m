@@ -48,21 +48,22 @@
     }];
 }
 
+
 -  (void)setMonthDataForMonth:(int)month {
     
     self.dates = [[NSMutableArray alloc] init];
     
     // TODO: ADD YEAR CONTROLL
-    NSDate *loopDate = [self dateWithYear:2015 month:month day:1]; // the start date you are looping from
+    NSDate *loopDate = [self dateWithYear:2015 month:month day:0]; // the start date you are looping from
     NSDate *endDate;
     
     // Changing days number in month
     if ((month == 1) || (month == 3) || (month == 5) || (month == 7) || (month == 8) || (month == 10) || (month == 12)) {
-       endDate = [self dateWithYear:2015 month:month day:31 + 1];
+       endDate = [self dateWithYear:2015 month:month day:31];
     } else if (month == 2) {
-        endDate = [self dateWithYear:2015 month:month day:28 + 1];
+        endDate = [self dateWithYear:2015 month:month day:28];
     } else {
-        endDate = [self dateWithYear:2015 month:month day:30 + 1];
+        endDate = [self dateWithYear:2015 month:month day:30];
     }
     
     NSCalendar *currentCalendar = [NSCalendar currentCalendar];

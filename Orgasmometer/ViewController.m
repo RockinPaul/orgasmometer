@@ -35,9 +35,10 @@
     
 }
 
+
 - (void)showCount {
     PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
-    [query fromLocalDatastore];
+    //[query fromLocalDatastore]; TODO
     [query whereKey:@"user" equalTo: [PFUser currentUser]];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -52,9 +53,10 @@
     }];
     
     OrgasmData *orgasmData = [[OrgasmData alloc] init];
-    [orgasmData setMonthDataForMonth:3];
+    [orgasmData setMonthDataForMonth:4];
 //    [orgasmData setDayDataForStartDate:nil andEndDate:nil];
 }
+
 
 
 - (void)orgasm:(UIButton *)sender {
