@@ -21,7 +21,7 @@
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             
-            [PFObject pinAll:objects];
+//            [PFObject pinAll:objects];
             NSLog(@"%lu dates", (unsigned long)[self.dates count]);
             for (NSDate* date in self.dates) {
                 int i = 0;

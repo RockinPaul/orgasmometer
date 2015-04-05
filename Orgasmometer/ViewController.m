@@ -39,6 +39,7 @@
 - (void)showCount {
     PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
     //[query fromLocalDatastore]; TODO
+    [query setLimit:1000];
     [query whereKey:@"user" equalTo: [PFUser currentUser]];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
