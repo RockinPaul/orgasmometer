@@ -27,13 +27,13 @@
     
     self.chartView.frame = CGRectMake(28, 94, 320, 250);
     
-    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(0, 100, 325, 15)];
+    JBLineChartFooterView *footerView = [[JBLineChartFooterView alloc] initWithFrame:CGRectMake(0, 0, 325, 15)];
     footerView.backgroundColor = [UIColor clearColor];
     footerView.leftLabel.text = @"Sunday";
     footerView.leftLabel.textColor = [UIColor redColor];
     footerView.rightLabel.text = @"Saturday";
     footerView.rightLabel.textColor = [UIColor redColor];
-    footerView.sectionCount = [orgasmData.month count];
+    footerView.sectionCount = [orgasmData.year count] + 1;
     
     NSLog(@"%lu", (unsigned long)[orgasmData.month count]);
     
@@ -56,12 +56,20 @@
     //    [self.view addSubview:_informationView];
     
     [self.view addSubview:self.chartView];
+//    [self.chartView reloadData];
+//    [super viewDidLoad];
+    
+    [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(updateChart) userInfo:nil repeats:YES];
+
+}
+
+- (void)updateChart {
     [self.chartView reloadData];
     [super viewDidLoad];
 }
 
 
-- (void) initData
+- (void)initData
 {
 //    self.testArray1 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(10)];
 //    self.testArray2 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(20)];
@@ -97,7 +105,7 @@
 - (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex;
 {
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
-    return orgasmData.month.count;
+    return orgasmData.year.count;
 }
 
 
@@ -115,14 +123,14 @@
     
     if (lineIndex == 1)
     {
-        NSNumber *value = (NSNumber *)[orgasmData.month objectAtIndex:horizontalIndex];
-        value = [NSNumber numberWithInt:[value intValue] + 4]; // for footer padding
+        NSNumber *value = (NSNumber *)[orgasmData.year objectAtIndex:horizontalIndex];
+        value = [NSNumber numberWithInt:[value intValue] + 15]; // for footer padding
         return [value floatValue];
     }
     else
     {
-        NSNumber *value = (NSNumber *)[orgasmData.month objectAtIndex:horizontalIndex];
-        value = [NSNumber numberWithInt:[value intValue] + 4]; // for footer padding
+        NSNumber *value = (NSNumber *)[orgasmData.year objectAtIndex:horizontalIndex];
+        value = [NSNumber numberWithInt:[value intValue] + 15]; // for footer padding
         return [value floatValue];
     }
     

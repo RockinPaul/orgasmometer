@@ -14,6 +14,7 @@
 - (void)setYearData {
     
     self.year = [[NSMutableArray alloc] init];
+    NSLog(@"%@",[self.year description]);
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]]; // current date
     long currentYear = [components year]; // current year
@@ -29,6 +30,7 @@
             
             long orgasmsCount = [self getOrgasmsCountForStartDate:startDate andEndDate:endDate];
             [self.year addObject: [NSNumber numberWithLong:orgasmsCount]];
+            
         }
         NSLog(@"%@", [self.year description]);
     });
@@ -45,6 +47,7 @@
 
 
 - (void)setMonthDataForMonth:(int)month {
+    
     
     self.dates = [[NSMutableArray alloc] init];
     self.month = [[NSMutableArray alloc] init];
