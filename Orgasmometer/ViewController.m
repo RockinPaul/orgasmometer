@@ -54,8 +54,9 @@
     }];
     
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
-    [orgasmData setMonthDataForMonth:4];
-//    [orgasmData setDayDataForStartDate:nil andEndDate:nil];
+    [orgasmData setYearData];
+    //    [orgasmData setMonthDataForMonth:4];
+////    [orgasmData setDayDataForStartDate:nil andEndDate:nil];
 }
 
 

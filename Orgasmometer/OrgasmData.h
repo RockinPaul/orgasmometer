@@ -22,18 +22,16 @@
 @property (nonatomic, strong) NSMutableArray *month;
 @property (nonatomic, strong) NSMutableArray *year;
 
-@property (nonatomic, strong) NSMutableArray *dayIntensity;
 @property (nonatomic, strong) NSMutableArray *monthIntensity;
 @property (nonatomic, strong) NSMutableArray *yearIntensity;
 
 
-- (void)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
+- (long)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
 
 - (void)setMonthDataForMonth:(int)month;
-- (NSArray *)setYearDataForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
+- (void)setYearData;
 
 - (NSDate *)dateWithYear:(NSInteger)year month:(NSInteger)month day:(NSInteger)day;
-
 
 + (OrgasmData *) sharedInstance;
 
