@@ -18,10 +18,15 @@
 
 @interface PlotViewController : UIViewController <JBLineChartViewDelegate, JBLineChartViewDataSource>
 
-//@property (nonatomic, strong) IBOutlet UIView *plotView;
+@property (nonatomic) BOOL isYear; //YES - if year chart should be presented. NO - if month chart
+
+@property (nonatomic, strong) IBOutlet UIButton *monthButton;
+@property (nonatomic, strong) IBOutlet UIButton *yearButton;
+
 @property (nonatomic, strong) IBOutlet UIView *plotView;
 @property (nonatomic, strong) JBLineChartView *chartView;
-@property (nonatomic, strong) NSArray *testArray1;
-@property (nonatomic, strong) NSArray *testArray2;
+
+- (IBAction)monthButtonPressed:(UIButton *)sender;
+- (IBAction)yearButtonPressed:(UIButton *)sender;
 
 @end

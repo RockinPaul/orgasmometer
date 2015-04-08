@@ -12,7 +12,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import "PlotViewController.h"
 
 @interface OrgasmData : NSObject
 
