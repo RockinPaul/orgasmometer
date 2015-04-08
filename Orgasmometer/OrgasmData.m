@@ -18,17 +18,20 @@
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]]; // current date
     long currentYear = [components year]; // current year
     
-    int nextMonth = 2;
-    for (int i = 1; i < 12; i++) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        NSDate *startDate = [self dateWithYear:currentYear month:i day:1];
-        NSDate *endDate = [self dateWithYear:currentYear month:nextMonth day:1];
-        nextMonth++;
-        
-        long orgasmsCount = [self getOrgasmsCountForStartDate:startDate andEndDate:endDate];
-        [self.year addObject: [NSNumber numberWithLong:orgasmsCount]];
-    }
-    NSLog(@"%@", [self.year description]);
+        int nextMonth = 2;
+        for (int i = 1; i < 12; i++) {
+            
+            NSDate *startDate = [self dateWithYear:currentYear month:i day:1];
+            NSDate *endDate = [self dateWithYear:currentYear month:nextMonth day:1];
+            nextMonth++;
+            
+            long orgasmsCount = [self getOrgasmsCountForStartDate:startDate andEndDate:endDate];
+            [self.year addObject: [NSNumber numberWithLong:orgasmsCount]];
+        }
+        NSLog(@"%@", [self.year description]);
+    });
 }
 
 - (long)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
