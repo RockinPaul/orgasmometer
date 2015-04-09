@@ -39,9 +39,10 @@
 - (long)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate {
     
     PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query whereKey:@"createdAt" greaterThanOrEqualTo:startDate];
     [query whereKey:@"createdAt" lessThanOrEqualTo:endDate];
-    NSLog(@"%lil start - %@, end - %@", (long)[query countObjects], startDate, endDate);
+    
     return [query countObjects];
 }
 

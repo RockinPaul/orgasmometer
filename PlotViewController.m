@@ -31,9 +31,16 @@
     [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateChart) userInfo:nil repeats:YES];
 }
 
+
 - (void)viewDidAppear:(BOOL)animated {
+    
     [self monthButtonPressed:nil];
+    
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    [orgasmData setYearData];
+    [orgasmData setMonthDataForMonth:4];
 }
+
 
 - (void)updateChart {
     
@@ -45,7 +52,12 @@
     footerView.leftLabel.textColor = [UIColor redColor];
     footerView.rightLabel.text = @"Saturday";
     footerView.rightLabel.textColor = [UIColor redColor];
-    footerView.sectionCount = [orgasmData.year count] + 1;
+    
+    if (self.isYear) {
+        footerView.sectionCount = [orgasmData.year count] + 1;
+    } else {
+        footerView.sectionCount = [orgasmData.month count] + 1;
+    }
     
     footerView.footerSeparatorColor = [UIColor blackColor];
     
@@ -53,6 +65,7 @@
 
     [self.chartView reloadData];
 }
+
 
 - (void)monthButtonPressed:(UIButton *)sender {
     

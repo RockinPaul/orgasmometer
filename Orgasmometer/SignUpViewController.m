@@ -63,6 +63,9 @@
             if ([error code] == 125) {
                 [self.errorLabel setText:@"Invalid email address"];
             }
+            if ([error code] == 202) {
+                [self.errorLabel setText:@"Username already taken"];
+            }
         }
     }];
 }

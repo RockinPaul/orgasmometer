@@ -37,8 +37,9 @@
 
 
 - (void)showCount {
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Orgasm"];
-    //[query fromLocalDatastore]; TODO
+    [query fromLocalDatastore];
     [query setLimit:1000];
     [query whereKey:@"user" equalTo: [PFUser currentUser]];
     
@@ -52,32 +53,27 @@
             NSLog(@"Error: %@ %@", error, [error userInfo]);
         }
     }];
-    
-    OrgasmData *orgasmData = [OrgasmData sharedInstance];
-    [orgasmData setYearData];
-    [orgasmData setMonthDataForMonth:4];
-////    [orgasmData setDayDataForStartDate:nil andEndDate:nil];
 }
 
 
 
 - (void)orgasm:(UIButton *)sender {
     
-    self.count += 1;
-    [self.counterLabel setText: [NSString stringWithFormat: @"%li", self.count]];
-    NSInteger roundedSliderValue = round(self.intensitySlider.value);
+        self.count += 1;
+        [self.counterLabel setText: [NSString stringWithFormat: @"%li", self.count]];
+        NSInteger roundedSliderValue = round(self.intensitySlider.value);
     
-    NSMutableArray *objects = [[NSMutableArray alloc] init];
-    PFObject *orgasm = [PFObject objectWithClassName:@"Orgasm"];
-    orgasm[@"intensity"] = [NSString stringWithFormat: @"%ld", roundedSliderValue];
-    orgasm[@"user"] = [PFUser currentUser];
-    [objects addObject:orgasm];
-    [orgasm saveInBackground];
-    [PFObject pinAll:objects];
+        NSMutableArray *objects = [[NSMutableArray alloc] init];
+        PFObject *orgasm = [PFObject objectWithClassName:@"Orgasm"];
+        orgasm[@"intensity"] = [NSString stringWithFormat: @"%ld", roundedSliderValue];
+        orgasm[@"user"] = [PFUser currentUser];
+        [objects addObject:orgasm];
+        [orgasm saveInBackground];
+        [PFObject pinAll:objects];
     
-    NSLog(@"orgasm");
-    NSLog(@"%ld", (long)roundedSliderValue);
-    
+        [self showCount];
+        NSLog(@"orgasm");
+        NSLog(@"%ld", (long)roundedSliderValue);
 }
 
 - (void)didReceiveMemoryWarning {
