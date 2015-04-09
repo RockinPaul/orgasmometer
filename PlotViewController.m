@@ -31,6 +31,10 @@
     [NSTimer scheduledTimerWithTimeInterval:0.1f target:self selector:@selector(updateChart) userInfo:nil repeats:YES];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self monthButtonPressed:nil];
+}
+
 - (void)updateChart {
     
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
@@ -51,10 +55,18 @@
 }
 
 - (void)monthButtonPressed:(UIButton *)sender {
+    
+    self.yearButton.backgroundColor = [UIColor clearColor];
+    self.monthButton.backgroundColor = [UIColor greenColor];
+    
     self.isYear = NO;
 }
 
 - (void)yearButtonPressed:(UIButton *)sender {
+
+    self.monthButton.backgroundColor = [UIColor clearColor];
+    self.yearButton.backgroundColor = [UIColor greenColor];
+    
     self.isYear = YES;
 }
 
