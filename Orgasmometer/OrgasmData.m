@@ -56,6 +56,8 @@
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]]; // current date
     long currentYear = [components year]; // current year
 
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    
     NSDate *loopDate = [self dateWithYear:currentYear month:month day:1]; // the start date you are looping from
     NSDate *endDate;
     
@@ -86,6 +88,7 @@
         NSNumber *numberForDates = [NSNumber numberWithLong:[self getOrgasmsCountForStartDate:loopDate andEndDate:nextDay]];
         [self.month addObject:numberForDates];
     }
+    });
     NSLog(@"%@", [self.month description]);
 }
 
