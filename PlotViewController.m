@@ -15,8 +15,6 @@
 
 - (void)viewDidLoad {
     
-    OrgasmData *orgasmData = [OrgasmData sharedInstance];
-    
     self.chartView = [[JBLineChartView alloc] init];
     self.chartView.delegate = self;
     self.chartView.dataSource = self;
@@ -61,12 +59,6 @@
 }
 
 
-- (void)initData
-{
-//    self.testArray1 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(10)];
-//    self.testArray2 = @[@(1), @(2), @(3), @(4), @(5), @(6), @(7), @(8), @(9), @(20)];
-}
-
 // Number of lines on plot
 - (NSUInteger)numberOfLinesInLineChartView:(JBChartView *)chartView;
 {
@@ -97,7 +89,12 @@
 - (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex;
 {
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
-    return orgasmData.year.count;
+    if (self.isYear) {
+        return [orgasmData.year count];
+    } else {
+        return [orgasmData.month count];
+    }
+
 }
 
 
@@ -113,7 +110,7 @@
 {
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
     
-    if (lineIndex == 1)
+    if (self.isYear)
     {
         NSNumber *value = (NSNumber *)[orgasmData.year objectAtIndex:horizontalIndex];
         value = [NSNumber numberWithInt:[value intValue] + 15]; // for footer padding
@@ -121,8 +118,8 @@
     }
     else
     {
-        NSNumber *value = (NSNumber *)[orgasmData.year objectAtIndex:horizontalIndex];
-        value = [NSNumber numberWithInt:[value intValue] + 15]; // for footer padding
+        NSNumber *value = (NSNumber *)[orgasmData.month objectAtIndex:horizontalIndex];
+        value = [NSNumber numberWithInt:[value intValue] + 4]; // for footer padding
         return [value floatValue];
     }
     
