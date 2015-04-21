@@ -3,6 +3,16 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Maven Pro Regular.otf">
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+        </mutableArray>
+        <mutableArray key="maven_pro_bold-webfont.ttf">
+            <string>MavenProBold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Sign Up View Controller-->
         <scene sceneID="i6g-Gb-OnB">
@@ -19,12 +29,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LP7-Ab-1a3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orgasmometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efR-lX-oiL">
-                                        <rect key="frame" x="72" y="111" width="230" height="43"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-r2-Yel">
                                         <rect key="frame" x="62" y="199" width="250" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,9 +48,11 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67M-ek-cVP">
-                                        <rect key="frame" x="92" y="364" width="191" height="57"/>
-                                        <color key="backgroundColor" red="0.78586467431268525" green="0.84242974564726203" blue="0.31169404407162626" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Sign In"/>
+                                        <rect key="frame" x="77" y="358" width="220" height="57"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="21"/>
+                                        <state key="normal" title="Sign In" backgroundImage="sign_in_button">
+                                            <color key="titleColor" red="0.34901960780000002" green="0.066666666669999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="auth:" destination="paW-cz-0cm" eventType="touchUpInside" id="sUT-hw-i5g"/>
                                         </connections>
@@ -59,19 +65,27 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you newcomer? Let's" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lib-dZ-dwB">
                                         <rect key="frame" x="62" y="448" width="196" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoF-XQ-QvD">
                                         <rect key="frame" x="266" y="444" width="55" height="30"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="15"/>
                                         <state key="normal" title="sign up!">
+                                            <color key="titleColor" red="0.78586467429999995" green="0.84242974559999995" blue="0.31169404410000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="newcomer:" destination="paW-cz-0cm" eventType="touchUpInside" id="HZg-JG-btM"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orgasmometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efR-lX-oiL">
+                                        <rect key="frame" x="72" y="106" width="230" height="57"/>
+                                        <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="23"/>
+                                        <color key="textColor" red="0.78586467429999995" green="0.84242974559999995" blue="0.31169404410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.9221711722" green="0.3313795906" blue="0.49688714880000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -222,6 +236,7 @@
     <resources>
         <image name="menu_button" width="66" height="66"/>
         <image name="orgasm_button" width="296" height="67"/>
+        <image name="sign_in_button" width="227" height="47"/>
         <image name="slider_max" width="33" height="33"/>
         <image name="slider_min" width="33" height="33"/>
         <image name="stat_button" width="66" height="66"/>

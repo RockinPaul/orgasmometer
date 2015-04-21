@@ -11,6 +11,28 @@
 		E91143F11AC807B50040D98D /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E91143EE1AC807B50040D98D /* JBLineChartFooterView.m */; };
 		E99CA6841AC81A1F006112EA /* GridView.m in Sources */ = {isa = PBXBuildFile; fileRef = E99CA6831AC81A1F006112EA /* GridView.m */; };
 		E99CA6871AC8310E006112EA /* OrgasmData.m in Sources */ = {isa = PBXBuildFile; fileRef = E99CA6861AC8310E006112EA /* OrgasmData.m */; };
+		E9C43D711AE64E170076554E /* Maven Pro Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D561AE64E170076554E /* Maven Pro Black.otf */; };
+		E9C43D721AE64E170076554E /* Maven Pro Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D571AE64E170076554E /* Maven Pro Bold.otf */; };
+		E9C43D731AE64E170076554E /* Maven Pro Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D581AE64E170076554E /* Maven Pro Medium.otf */; };
+		E9C43D741AE64E170076554E /* Maven Pro Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D591AE64E170076554E /* Maven Pro Regular.otf */; };
+		E9C43D751AE64E170076554E /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D5A1AE64E170076554E /* README.rtf */; };
+		E9C43D761AE64E170076554E /* maven_pro_black-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D5D1AE64E170076554E /* maven_pro_black-webfont.eot */; };
+		E9C43D771AE64E170076554E /* maven_pro_black-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D5E1AE64E170076554E /* maven_pro_black-webfont.svg */; };
+		E9C43D781AE64E170076554E /* maven_pro_black-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D5F1AE64E170076554E /* maven_pro_black-webfont.ttf */; };
+		E9C43D791AE64E170076554E /* maven_pro_black-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D601AE64E170076554E /* maven_pro_black-webfont.woff */; };
+		E9C43D7A1AE64E170076554E /* maven_pro_bold-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D621AE64E170076554E /* maven_pro_bold-webfont.eot */; };
+		E9C43D7B1AE64E170076554E /* maven_pro_bold-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D631AE64E170076554E /* maven_pro_bold-webfont.svg */; };
+		E9C43D7C1AE64E170076554E /* maven_pro_bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D641AE64E170076554E /* maven_pro_bold-webfont.ttf */; };
+		E9C43D7D1AE64E170076554E /* maven_pro_bold-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D651AE64E170076554E /* maven_pro_bold-webfont.woff */; };
+		E9C43D7E1AE64E170076554E /* maven_pro_medium-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D671AE64E170076554E /* maven_pro_medium-webfont.eot */; };
+		E9C43D7F1AE64E170076554E /* maven_pro_medium-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D681AE64E170076554E /* maven_pro_medium-webfont.svg */; };
+		E9C43D801AE64E170076554E /* maven_pro_medium-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D691AE64E170076554E /* maven_pro_medium-webfont.ttf */; };
+		E9C43D811AE64E170076554E /* maven_pro_medium-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D6A1AE64E170076554E /* maven_pro_medium-webfont.woff */; };
+		E9C43D821AE64E170076554E /* maven_pro_regular-webfont.eot in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D6C1AE64E170076554E /* maven_pro_regular-webfont.eot */; };
+		E9C43D831AE64E170076554E /* maven_pro_regular-webfont.svg in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D6D1AE64E170076554E /* maven_pro_regular-webfont.svg */; };
+		E9C43D841AE64E170076554E /* maven_pro_regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D6E1AE64E170076554E /* maven_pro_regular-webfont.ttf */; };
+		E9C43D851AE64E170076554E /* maven_pro_regular-webfont.woff in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D6F1AE64E170076554E /* maven_pro_regular-webfont.woff */; };
+		E9C43D861AE64E170076554E /* stylesheet.css in Resources */ = {isa = PBXBuildFile; fileRef = E9C43D701AE64E170076554E /* stylesheet.css */; };
 		E9DD6FB51AC459A8002310C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB41AC459A8002310C4 /* main.m */; };
 		E9DD6FB81AC459A8002310C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB71AC459A8002310C4 /* AppDelegate.m */; };
 		E9DD6FBB1AC459A8002310C4 /* Orgasmometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9DD6FB91AC459A8002310C4 /* Orgasmometer.xcdatamodeld */; };
@@ -64,6 +86,28 @@
 		E99CA6831AC81A1F006112EA /* GridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridView.m; sourceTree = "<group>"; };
 		E99CA6851AC82E15006112EA /* OrgasmData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrgasmData.h; sourceTree = "<group>"; };
 		E99CA6861AC8310E006112EA /* OrgasmData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrgasmData.m; sourceTree = "<group>"; };
+		E9C43D561AE64E170076554E /* Maven Pro Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maven Pro Black.otf"; sourceTree = "<group>"; };
+		E9C43D571AE64E170076554E /* Maven Pro Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maven Pro Bold.otf"; sourceTree = "<group>"; };
+		E9C43D581AE64E170076554E /* Maven Pro Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maven Pro Medium.otf"; sourceTree = "<group>"; };
+		E9C43D591AE64E170076554E /* Maven Pro Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Maven Pro Regular.otf"; sourceTree = "<group>"; };
+		E9C43D5A1AE64E170076554E /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
+		E9C43D5D1AE64E170076554E /* maven_pro_black-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_black-webfont.eot"; sourceTree = "<group>"; };
+		E9C43D5E1AE64E170076554E /* maven_pro_black-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "maven_pro_black-webfont.svg"; sourceTree = "<group>"; };
+		E9C43D5F1AE64E170076554E /* maven_pro_black-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_black-webfont.ttf"; sourceTree = "<group>"; };
+		E9C43D601AE64E170076554E /* maven_pro_black-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_black-webfont.woff"; sourceTree = "<group>"; };
+		E9C43D621AE64E170076554E /* maven_pro_bold-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_bold-webfont.eot"; sourceTree = "<group>"; };
+		E9C43D631AE64E170076554E /* maven_pro_bold-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "maven_pro_bold-webfont.svg"; sourceTree = "<group>"; };
+		E9C43D641AE64E170076554E /* maven_pro_bold-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_bold-webfont.ttf"; sourceTree = "<group>"; };
+		E9C43D651AE64E170076554E /* maven_pro_bold-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_bold-webfont.woff"; sourceTree = "<group>"; };
+		E9C43D671AE64E170076554E /* maven_pro_medium-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_medium-webfont.eot"; sourceTree = "<group>"; };
+		E9C43D681AE64E170076554E /* maven_pro_medium-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "maven_pro_medium-webfont.svg"; sourceTree = "<group>"; };
+		E9C43D691AE64E170076554E /* maven_pro_medium-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_medium-webfont.ttf"; sourceTree = "<group>"; };
+		E9C43D6A1AE64E170076554E /* maven_pro_medium-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_medium-webfont.woff"; sourceTree = "<group>"; };
+		E9C43D6C1AE64E170076554E /* maven_pro_regular-webfont.eot */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_regular-webfont.eot"; sourceTree = "<group>"; };
+		E9C43D6D1AE64E170076554E /* maven_pro_regular-webfont.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "maven_pro_regular-webfont.svg"; sourceTree = "<group>"; };
+		E9C43D6E1AE64E170076554E /* maven_pro_regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_regular-webfont.ttf"; sourceTree = "<group>"; };
+		E9C43D6F1AE64E170076554E /* maven_pro_regular-webfont.woff */ = {isa = PBXFileReference; lastKnownFileType = file; path = "maven_pro_regular-webfont.woff"; sourceTree = "<group>"; };
+		E9C43D701AE64E170076554E /* stylesheet.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = stylesheet.css; sourceTree = "<group>"; };
 		E9DD6FAF1AC459A8002310C4 /* Orgasmometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orgasmometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DD6FB31AC459A8002310C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9DD6FB41AC459A8002310C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +190,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9C43D551AE64E170076554E /* mavenpro */ = {
+			isa = PBXGroup;
+			children = (
+				E9C43D561AE64E170076554E /* Maven Pro Black.otf */,
+				E9C43D571AE64E170076554E /* Maven Pro Bold.otf */,
+				E9C43D581AE64E170076554E /* Maven Pro Medium.otf */,
+				E9C43D591AE64E170076554E /* Maven Pro Regular.otf */,
+				E9C43D5A1AE64E170076554E /* README.rtf */,
+				E9C43D5B1AE64E170076554E /* web */,
+			);
+			path = mavenpro;
+			sourceTree = "<group>";
+		};
+		E9C43D5B1AE64E170076554E /* web */ = {
+			isa = PBXGroup;
+			children = (
+				E9C43D5C1AE64E170076554E /* Black */,
+				E9C43D611AE64E170076554E /* Bold */,
+				E9C43D661AE64E170076554E /* Medium */,
+				E9C43D6B1AE64E170076554E /* Regular */,
+				E9C43D701AE64E170076554E /* stylesheet.css */,
+			);
+			path = web;
+			sourceTree = "<group>";
+		};
+		E9C43D5C1AE64E170076554E /* Black */ = {
+			isa = PBXGroup;
+			children = (
+				E9C43D5D1AE64E170076554E /* maven_pro_black-webfont.eot */,
+				E9C43D5E1AE64E170076554E /* maven_pro_black-webfont.svg */,
+				E9C43D5F1AE64E170076554E /* maven_pro_black-webfont.ttf */,
+				E9C43D601AE64E170076554E /* maven_pro_black-webfont.woff */,
+			);
+			path = Black;
+			sourceTree = "<group>";
+		};
+		E9C43D611AE64E170076554E /* Bold */ = {
+			isa = PBXGroup;
+			children = (
+				E9C43D621AE64E170076554E /* maven_pro_bold-webfont.eot */,
+				E9C43D631AE64E170076554E /* maven_pro_bold-webfont.svg */,
+				E9C43D641AE64E170076554E /* maven_pro_bold-webfont.ttf */,
+				E9C43D651AE64E170076554E /* maven_pro_bold-webfont.woff */,
+			);
+			path = Bold;
+			sourceTree = "<group>";
+		};
+		E9C43D661AE64E170076554E /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+				E9C43D671AE64E170076554E /* maven_pro_medium-webfont.eot */,
+				E9C43D681AE64E170076554E /* maven_pro_medium-webfont.svg */,
+				E9C43D691AE64E170076554E /* maven_pro_medium-webfont.ttf */,
+				E9C43D6A1AE64E170076554E /* maven_pro_medium-webfont.woff */,
+			);
+			path = Medium;
+			sourceTree = "<group>";
+		};
+		E9C43D6B1AE64E170076554E /* Regular */ = {
+			isa = PBXGroup;
+			children = (
+				E9C43D6C1AE64E170076554E /* maven_pro_regular-webfont.eot */,
+				E9C43D6D1AE64E170076554E /* maven_pro_regular-webfont.svg */,
+				E9C43D6E1AE64E170076554E /* maven_pro_regular-webfont.ttf */,
+				E9C43D6F1AE64E170076554E /* maven_pro_regular-webfont.woff */,
+			);
+			path = Regular;
+			sourceTree = "<group>";
+		};
 		E9DD6FA61AC459A7002310C4 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +319,7 @@
 		E9DD6FB21AC459A8002310C4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9C43D551AE64E170076554E /* mavenpro */,
 				E9DD6FB31AC459A8002310C4 /* Info.plist */,
 				E9DD6FB41AC459A8002310C4 /* main.m */,
 			);
@@ -340,9 +454,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C43D721AE64E170076554E /* Maven Pro Bold.otf in Resources */,
 				E9DD6FC11AC459A8002310C4 /* MainV2.storyboard in Resources */,
+				E9C43D771AE64E170076554E /* maven_pro_black-webfont.svg in Resources */,
+				E9C43D761AE64E170076554E /* maven_pro_black-webfont.eot in Resources */,
+				E9C43D7D1AE64E170076554E /* maven_pro_bold-webfont.woff in Resources */,
+				E9C43D751AE64E170076554E /* README.rtf in Resources */,
+				E9C43D7B1AE64E170076554E /* maven_pro_bold-webfont.svg in Resources */,
+				E9C43D831AE64E170076554E /* maven_pro_regular-webfont.svg in Resources */,
+				E9C43D791AE64E170076554E /* maven_pro_black-webfont.woff in Resources */,
+				E9C43D7A1AE64E170076554E /* maven_pro_bold-webfont.eot in Resources */,
+				E9C43D801AE64E170076554E /* maven_pro_medium-webfont.ttf in Resources */,
+				E9C43D7F1AE64E170076554E /* maven_pro_medium-webfont.svg in Resources */,
 				E9DD6FC61AC459A8002310C4 /* LaunchScreen.xib in Resources */,
 				E9DD6FC31AC459A8002310C4 /* Images.xcassets in Resources */,
+				E9C43D7C1AE64E170076554E /* maven_pro_bold-webfont.ttf in Resources */,
+				E9C43D821AE64E170076554E /* maven_pro_regular-webfont.eot in Resources */,
+				E9C43D861AE64E170076554E /* stylesheet.css in Resources */,
+				E9C43D851AE64E170076554E /* maven_pro_regular-webfont.woff in Resources */,
+				E9C43D811AE64E170076554E /* maven_pro_medium-webfont.woff in Resources */,
+				E9C43D741AE64E170076554E /* Maven Pro Regular.otf in Resources */,
+				E9C43D731AE64E170076554E /* Maven Pro Medium.otf in Resources */,
+				E9C43D711AE64E170076554E /* Maven Pro Black.otf in Resources */,
+				E9C43D7E1AE64E170076554E /* maven_pro_medium-webfont.eot in Resources */,
+				E9C43D781AE64E170076554E /* maven_pro_black-webfont.ttf in Resources */,
+				E9C43D841AE64E170076554E /* maven_pro_regular-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
