@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -8,8 +8,12 @@
             <string>MavenProRegular</string>
             <string>MavenProRegular</string>
             <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
         </mutableArray>
         <mutableArray key="maven_pro_bold-webfont.ttf">
+            <string>MavenProBold</string>
             <string>MavenProBold</string>
         </mutableArray>
     </customFonts>
@@ -19,37 +23,39 @@
             <objects>
                 <viewController storyboardIdentifier="sign_up" useStoryboardIdentifierAsRestorationIdentifier="YES" id="paW-cz-0cm" customClass="SignUpViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="W5a-yr-eul"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tqp-hq-9CF"/>
+                        <viewControllerLayoutGuide type="top" id="UfJ-Gk-Zij"/>
+                        <viewControllerLayoutGuide type="bottom" id="dKB-pi-tWz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kmY-dE-pvO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LP7-Ab-1a3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-r2-Yel">
-                                        <rect key="frame" x="62" y="199" width="250" height="40"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vDY-r2-Yel">
+                                        <rect key="frame" x="35" y="177" width="250" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="paW-cz-0cm" id="sa9-zD-xm2"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="pass" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="bezel" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dHY-Ep-xKi">
-                                        <rect key="frame" x="62" y="275" width="250" height="40"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="pass" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="bezel" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dHY-Ep-xKi">
+                                        <rect key="frame" x="35" y="247" width="250" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="paW-cz-0cm" id="0YH-G2-fdQ"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67M-ek-cVP">
-                                        <rect key="frame" x="77" y="358" width="220" height="57"/>
-                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="21"/>
+                                        <rect key="frame" x="50" y="334" width="220" height="57"/>
+                                        <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="24"/>
                                         <state key="normal" title="Sign In" backgroundImage="sign_in_button">
                                             <color key="titleColor" red="0.34901960780000002" green="0.066666666669999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -58,19 +64,25 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zl-zk-hHl">
-                                        <rect key="frame" x="62" y="323" width="250" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="35" y="295" width="196" height="21"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you newcomer? Let's" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lib-dZ-dwB">
-                                        <rect key="frame" x="62" y="448" width="196" height="21"/>
+                                        <rect key="frame" x="31" y="426" width="196" height="21"/>
                                         <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orgasmometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efR-lX-oiL">
+                                        <rect key="frame" x="45" y="76" width="230" height="57"/>
+                                        <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="23"/>
+                                        <color key="textColor" red="0.78586467429999995" green="0.84242974559999995" blue="0.31169404410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoF-XQ-QvD">
-                                        <rect key="frame" x="266" y="444" width="55" height="30"/>
+                                        <rect key="frame" x="230" y="422" width="55" height="30"/>
                                         <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="15"/>
                                         <state key="normal" title="sign up!">
                                             <color key="titleColor" red="0.78586467429999995" green="0.84242974559999995" blue="0.31169404410000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,14 +92,18 @@
                                             <action selector="newcomer:" destination="paW-cz-0cm" eventType="touchUpInside" id="HZg-JG-btM"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orgasmometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efR-lX-oiL">
-                                        <rect key="frame" x="72" y="106" width="230" height="57"/>
-                                        <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="23"/>
-                                        <color key="textColor" red="0.78586467429999995" green="0.84242974559999995" blue="0.31169404410000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2T-MV-xcg">
+                                        <rect key="frame" x="239" y="291" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="15"/>
+                                        <state key="normal" title="reset" backgroundImage="small_button">
+                                            <color key="titleColor" red="0.34901960780000002" green="0.066666666669999999" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reset:" destination="paW-cz-0cm" eventType="touchUpInside" id="4T8-qg-w9g"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.9221711722" green="0.3313795906" blue="0.49688714880000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,25 +117,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNA-P8-Nde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-233" y="217"/>
+            <point key="canvasLocation" x="-125" y="205"/>
         </scene>
         <!--Plot View Controller-->
         <scene sceneID="uZc-8W-z6R">
             <objects>
                 <viewController storyboardIdentifier="plot" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pxq-5M-Gaf" customClass="PlotViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="S6W-hL-LPm"/>
-                        <viewControllerLayoutGuide type="bottom" id="PbI-cV-bVj"/>
+                        <viewControllerLayoutGuide type="top" id="d6r-Mp-HEB"/>
+                        <viewControllerLayoutGuide type="bottom" id="KXY-PH-bvd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pnG-c6-rhY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXc-gY-Ye7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpA-4u-E5h">
+                                        <rect key="frame" x="86" y="23" width="55" height="55"/>
+                                        <state key="normal" image="stat_button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="modal" id="wf8-x7-csI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-hj-1zQ">
+                                        <rect key="frame" x="12" y="23" width="55" height="55"/>
+                                        <state key="normal" image="menu_button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-eO-WvH">
-                                        <rect key="frame" x="81" y="413" width="56" height="30"/>
+                                        <rect key="frame" x="57" y="338" width="56" height="30"/>
                                         <state key="normal" title="Month">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -128,7 +159,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6P-gV-bhf">
-                                        <rect key="frame" x="231" y="413" width="56" height="30"/>
+                                        <rect key="frame" x="207" y="338" width="56" height="30"/>
                                         <state key="normal" title="Year">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -136,23 +167,7 @@
                                             <action selector="yearButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="OBf-O2-Gxy"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MpA-4u-E5h">
-                                        <rect key="frame" x="99" y="23" width="66" height="66"/>
-                                        <state key="normal" image="stat_button">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="wf8-x7-csI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-hj-1zQ">
-                                        <rect key="frame" x="13" y="23" width="66" height="66"/>
-                                        <state key="normal" image="menu_button">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.9221711722" green="0.3313795906" blue="0.49688714880000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,25 +179,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMp-SK-xPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90" y="883"/>
+            <point key="canvasLocation" x="48" y="835.90666666666664"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="F0O-sf-sx5"/>
+                        <viewControllerLayoutGuide type="bottom" id="OWF-XT-mIN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IoI-jI-bqJ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIC-TB-8We">
-                                        <rect key="frame" x="39" y="432" width="296" height="67"/>
+                                        <rect key="frame" x="12" y="352" width="289" height="60"/>
                                         <state key="normal" image="orgasm_button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -190,32 +205,31 @@
                                             <action selector="orgasm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lrf-lc-Fbh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-PS-zmv">
-                                        <rect key="frame" x="13" y="23" width="66" height="66"/>
-                                        <state key="normal" image="menu_button">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr6-hU-eqs">
-                                        <rect key="frame" x="20" y="211" width="335" height="70"/>
+                                        <rect key="frame" x="24" y="139" width="265" height="70"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="70"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="slider_min" maximumValueImage="slider_max" translatesAutoresizingMaskIntoConstraints="NO" id="GGM-2V-Sc9">
-                                        <rect key="frame" x="37" y="350" width="300" height="31"/>
+                                        <rect key="frame" x="26" y="272" width="260" height="33"/>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udW-c3-AY6">
-                                        <rect key="frame" x="99" y="23" width="66" height="66"/>
+                                        <rect key="frame" x="86" y="23" width="55" height="55"/>
                                         <state key="normal" image="stat_button">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pxq-5M-Gaf" kind="show" id="7TK-fN-Q42"/>
+                                            <segue destination="pxq-5M-Gaf" kind="modal" id="7TK-fN-Q42"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-PS-zmv">
+                                        <rect key="frame" x="12" y="23" width="55" height="55"/>
+                                        <state key="normal" image="menu_button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92217117216851974" green="0.33137959058350125" blue="0.49688714877477569" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -230,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="217"/>
+            <point key="canvasLocation" x="220" y="205"/>
         </scene>
     </scenes>
     <resources>
@@ -239,6 +253,13 @@
         <image name="sign_in_button" width="227" height="47"/>
         <image name="slider_max" width="33" height="33"/>
         <image name="slider_min" width="33" height="33"/>
+        <image name="small_button" width="431" height="142"/>
         <image name="stat_button" width="66" height="66"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

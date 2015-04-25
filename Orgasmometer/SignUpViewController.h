@@ -24,6 +24,7 @@
 
 - (IBAction)newcomer:(UIButton *)sender;
 - (IBAction)auth:(UIButton *)sender;
+- (IBAction)reset:(UIButton *)sender;
 
 - (void)signUp;
 - (void)signIn;

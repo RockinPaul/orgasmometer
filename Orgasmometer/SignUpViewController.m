@@ -15,6 +15,9 @@
 - (void)viewDidLoad {
     // Log out for testing
     //[PFUser logOut];
+    
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background_iphone5.png"]];
+    self.view.backgroundColor = background;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,6 +45,24 @@
     } else {
         NSLog(@"Something is wrong.");
     }
+}
+
+
+// Reset password. User takes the email with instructions from Parse.
+- (void)reset:(UIButton *)sender {
+    [PFUser requestPasswordResetForEmailInBackground:[self.emailTextField text] block:^(BOOL succeeded, NSError *error){
+        if (!error) {
+            [self.errorLabel setText:@"Check email for instructions"];
+            NSLog(@"Succesfuly reset");
+        } else {
+            if ([error code] == 205) {
+                [self.errorLabel setText:@"No user found with this email"];
+            }
+            if ([error code] == 204) {
+                [self.errorLabel setText:@"You must provide an email"];
+            }
+        }
+    }];
 }
 
 

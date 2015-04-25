@@ -15,13 +15,16 @@
 
 - (void)viewDidLoad {
     
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background_iphone5.png"]];
+    self.view.backgroundColor = background;
+    
     self.chartView = [[JBLineChartView alloc] init];
     self.chartView.delegate = self;
     self.chartView.dataSource = self;
     self.chartView.state = 0;
     self.chartView.backgroundColor = [UIColor clearColor];
     
-    self.chartView.frame = CGRectMake(28, 120, 320, 250);
+    self.chartView.frame = CGRectMake(28, 120, 260, 150);
     
     [self.chartView setMinimumValue:1.0f];
     [self.chartView setMaximumValue:20.0f];

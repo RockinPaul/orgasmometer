@@ -17,8 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view, typically from a nib.
-    
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background_iphone5.png"]];
+    self.view.backgroundColor = background;
+        
     [self.intensitySlider setThumbImage: [UIImage imageNamed:@"slider_thumb.png"] forState:UIControlStateNormal];
     UIImage *stetchLeftTrack = [[UIImage imageNamed:@"slider_bar.png"]
                                 stretchableImageWithLeftCapWidth:10.0 topCapHeight:0.0];
