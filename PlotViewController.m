@@ -15,6 +15,14 @@
 
 - (void)viewDidLoad {
     
+    // ============================= PlotViewController state restoration =============================
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    if (orgasmData.monthButtonPressed) {
+        [self monthButtonPressed:nil];
+    } else {
+        [self yearButtonPressed:nil];
+    }
+    
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background_iphone5.png"]];
     self.view.backgroundColor = background;
     
@@ -36,8 +44,6 @@
 
 
 - (void)viewDidAppear:(BOOL)animated {
-    
-    [self monthButtonPressed:nil];
     
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
     [orgasmData setYearData];
@@ -72,6 +78,9 @@
 
 - (void)monthButtonPressed:(UIButton *)sender {
     
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    orgasmData.monthButtonPressed = YES;
+    
     self.yearButton.backgroundColor = [UIColor clearColor];
     self.monthButton.backgroundColor = [UIColor greenColor];
     
@@ -79,6 +88,9 @@
 }
 
 - (void)yearButtonPressed:(UIButton *)sender {
+    
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    orgasmData.monthButtonPressed = NO;
 
     self.monthButton.backgroundColor = [UIColor clearColor];
     self.yearButton.backgroundColor = [UIColor greenColor];

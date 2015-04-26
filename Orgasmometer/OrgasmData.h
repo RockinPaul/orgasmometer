@@ -25,6 +25,8 @@
 @property (nonatomic, strong) NSMutableArray *monthIntensity;
 @property (nonatomic, strong) NSMutableArray *yearIntensity;
 
+@property (nonatomic) BOOL monthButtonPressed; // YES - monthButtonPressed :)
+                                               // NO  - yearButtonPressed
 
 - (long)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
 

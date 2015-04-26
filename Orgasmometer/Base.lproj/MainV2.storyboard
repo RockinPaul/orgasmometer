@@ -4,17 +4,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Maven Pro Regular.otf">
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
+        <mutableArray key="Maven Pro Bold.otf">
+            <string>MavenProBold</string>
+            <string>MavenProBold</string>
         </mutableArray>
-        <mutableArray key="maven_pro_bold-webfont.ttf">
-            <string>MavenProBold</string>
-            <string>MavenProBold</string>
+        <mutableArray key="maven_pro_regular-webfont.ttf">
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
         </mutableArray>
     </customFonts>
     <scenes>
