@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "OrgasmData.h"
+#import "PlotViewController.h"
 
 @interface ViewController : UIViewController
 
@@ -21,6 +22,7 @@
 @property (nonatomic) long count;
 
 - (IBAction)orgasm:(UIButton *)sender;
+- (IBAction)statisticButtonPressed:(UIButton *)sender;
 
 - (void)showCount;
 

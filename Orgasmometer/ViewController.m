@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Hide navigation bar
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background_iphone5.png"]];
     self.view.backgroundColor = background;
         
@@ -56,6 +59,13 @@
     }];
 }
 
+
+- (IBAction)statisticButtonPressed:(UIButton *)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainV2" bundle:[NSBundle mainBundle]];
+    PlotViewController *plotViewController = [storyboard instantiateViewControllerWithIdentifier:@"PlotViewController"];
+    [self.navigationController pushViewController:plotViewController animated:YES];
+    NSLog(@"PUSH");
+}
 
 
 - (void)orgasm:(UIButton *)sender {

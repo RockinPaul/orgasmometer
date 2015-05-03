@@ -30,7 +30,8 @@
 
 - (void)presentViewController {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainV2" bundle:[NSBundle mainBundle]];
-    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+//    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    ViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"nav"];
     [self presentViewController:vc animated:YES completion:nil];
 }
 

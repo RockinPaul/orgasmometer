@@ -28,5 +28,6 @@
 
 - (IBAction)monthButtonPressed:(UIButton *)sender;
 - (IBAction)yearButtonPressed:(UIButton *)sender;
+- (IBAction)statisticButtonPressed:(UIButton *)sender;
 
 @end

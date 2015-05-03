@@ -4,17 +4,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Maven Pro Bold.otf">
-            <string>MavenProBold</string>
-            <string>MavenProBold</string>
+        <mutableArray key="Maven Pro Regular.otf">
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
+            <string>MavenProRegular</string>
         </mutableArray>
-        <mutableArray key="maven_pro_regular-webfont.ttf">
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
-            <string>MavenProRegular</string>
+        <mutableArray key="maven_pro_bold-webfont.ttf">
+            <string>MavenProBold</string>
+            <string>MavenProBold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -122,7 +122,7 @@
         <!--Plot View Controller-->
         <scene sceneID="uZc-8W-z6R">
             <objects>
-                <viewController storyboardIdentifier="plot" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pxq-5M-Gaf" customClass="PlotViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlotViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pxq-5M-Gaf" customClass="PlotViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d6r-Mp-HEB"/>
                         <viewControllerLayoutGuide type="bottom" id="KXY-PH-bvd"/>
@@ -140,7 +140,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="modal" id="wf8-x7-csI"/>
+                                            <action selector="statisticButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="VxL-is-3yV"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwL-hj-1zQ">
@@ -172,6 +172,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zXR-Jb-Wpx"/>
                     <connections>
                         <outlet property="monthButton" destination="PfO-eO-WvH" id="HD5-cd-1nX"/>
                         <outlet property="yearButton" destination="N6P-gV-bhf" id="IDt-co-tcM"/>
@@ -180,6 +181,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMp-SK-xPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="48" y="835.90666666666664"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qY0-9q-oUZ">
+            <objects>
+                <navigationController storyboardIdentifier="nav" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XQD-Ah-ebU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lgK-fg-cUR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aHf-cv-I2g"/>
+                        <segue destination="pxq-5M-Gaf" kind="push" id="bil-rw-PQK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zL-N7-z1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="835"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -220,7 +241,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pxq-5M-Gaf" kind="modal" id="7TK-fN-Q42"/>
+                                            <action selector="statisticButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbj-0F-tbL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jas-PS-zmv">
@@ -234,6 +255,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sbQ-nj-Q8N"/>
                     <connections>
                         <outlet property="counterLabel" destination="Mr6-hU-eqs" id="Cuh-69-fj3"/>
                         <outlet property="intensitySlider" destination="GGM-2V-Sc9" id="2zV-hi-JEo"/>

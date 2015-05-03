@@ -184,4 +184,9 @@
     return 0;
 }
 
+- (IBAction)statisticButtonPressed:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"POP");
+}
+
 @end
