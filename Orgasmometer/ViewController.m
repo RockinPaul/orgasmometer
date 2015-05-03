@@ -66,7 +66,7 @@
     
         NSMutableArray *objects = [[NSMutableArray alloc] init];
         PFObject *orgasm = [PFObject objectWithClassName:@"Orgasm"];
-        orgasm[@"intensity"] = [NSString stringWithFormat: @"%ld", roundedSliderValue];
+        orgasm[@"intensity"] = [NSString stringWithFormat: @"%ld", (long)roundedSliderValue];
         orgasm[@"user"] = [PFUser currentUser];
         [objects addObject:orgasm];
         [orgasm saveInBackground];

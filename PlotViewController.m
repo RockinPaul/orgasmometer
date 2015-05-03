@@ -51,6 +51,24 @@
 }
 
 
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.chartView forKey:@"chartView"];
+    [aCoder encodeObject:self.monthButton forKey:@"monthButton"];
+    [aCoder encodeObject:self.yearButton forKey:@"yearButton"];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        NSLog(@"SUPER");
+        self.chartView = [aDecoder decodeObjectForKey:@"chartView"];
+        self.monthButton = [aDecoder decodeObjectForKey:@"monthButton"];
+        self.yearButton = [aDecoder decodeObjectForKey:@"yearButton"];
+    }
+    return self;
+}
+
+
 - (void)updateChart {
     
     OrgasmData *orgasmData = [OrgasmData sharedInstance];

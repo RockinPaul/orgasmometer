@@ -16,7 +16,7 @@
 #import "JBChartView.h"
 #include "JBLineChartFooterView.h"
 
-@interface PlotViewController : UIViewController <JBLineChartViewDelegate, JBLineChartViewDataSource>
+@interface PlotViewController : UIViewController <JBLineChartViewDelegate, JBLineChartViewDataSource, NSCoding>
 
 @property (nonatomic) BOOL isYear; //YES - if year chart should be presented. NO - if month chart
 
