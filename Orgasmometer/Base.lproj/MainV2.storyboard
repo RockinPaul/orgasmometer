@@ -167,6 +167,24 @@
                                             <action selector="yearButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="OBf-O2-Gxy"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-Lh-qJi">
+                                        <rect key="frame" x="21" y="381" width="133" height="35"/>
+                                        <state key="normal" title="Intensity">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="monthButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="CBZ-6c-bEL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dp-9z-dr0">
+                                        <rect key="frame" x="166" y="381" width="133" height="35"/>
+                                        <state key="normal" title="Count">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yearButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="HnX-Ay-uak"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                         </subviews>

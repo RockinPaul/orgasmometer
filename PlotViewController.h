@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) IBOutlet UIButton *monthButton;
 @property (nonatomic, strong) IBOutlet UIButton *yearButton;
+@property (nonatomic, strong) IBOutlet UIButton *countButton;
+@property (nonatomic, strong) IBOutlet UIButton *intensityButton;
 
 @property (nonatomic, strong) IBOutlet UIView *plotView;
 @property (nonatomic, strong) JBLineChartView *chartView;
