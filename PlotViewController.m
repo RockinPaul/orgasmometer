@@ -99,8 +99,14 @@
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
     orgasmData.monthButtonPressed = YES;
     
-    self.yearButton.backgroundColor = [UIColor clearColor];
-    self.monthButton.backgroundColor = [UIColor greenColor];
+    UIImageView *nonactive = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
+    UIImageView *active = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
+    
+//    nonactive.frame = CGRectMake(128, 40, 0, 0);
+//    active.frame = CGRectMake(128, 40, 0, 0);
+    
+    self.yearButton.backgroundColor = [[UIColor alloc] initWithPatternImage:nonactive.image];
+    self.monthButton.backgroundColor = [[UIColor alloc] initWithPatternImage:active.image];
     
     self.isYear = NO;
 }
@@ -109,9 +115,15 @@
     
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
     orgasmData.monthButtonPressed = NO;
+    
+    UIImageView *nonactive = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
+    UIImageView *active = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
 
-    self.monthButton.backgroundColor = [UIColor clearColor];
-    self.yearButton.backgroundColor = [UIColor greenColor];
+//    nonactive.frame = CGRectMake(128, 40, 0, 0);
+//    active.frame = CGRectMake(128, 40, 0, 0);
+    
+    self.monthButton.backgroundColor = self.monthButton.backgroundColor = [[UIColor alloc] initWithPatternImage:nonactive.image];
+    self.yearButton.backgroundColor = [[UIColor alloc] initWithPatternImage:active.image];
     
     self.isYear = YES;
 }
@@ -130,11 +142,13 @@
     return JBLineChartViewLineStyleSolid;
 }
 
+
 // Line width
 - (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
 {
     return 5.0;
 }
+
 
 // Line smooth
 - (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
@@ -183,6 +197,7 @@
     
     return 0;
 }
+
 
 - (IBAction)statisticButtonPressed:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
