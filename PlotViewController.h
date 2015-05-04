@@ -19,6 +19,7 @@
 @interface PlotViewController : UIViewController <JBLineChartViewDelegate, JBLineChartViewDataSource, NSCoding>
 
 @property (nonatomic) BOOL isYear; //YES - if year chart should be presented. NO - if month chart
+@property (nonatomic) BOOL isIntensity; // YES - if chart of intensity should be presented. NO - for count chart
 
 @property (nonatomic, strong) IBOutlet UIButton *monthButton;
 @property (nonatomic, strong) IBOutlet UIButton *yearButton;
@@ -30,6 +31,8 @@
 
 - (IBAction)monthButtonPressed:(UIButton *)sender;
 - (IBAction)yearButtonPressed:(UIButton *)sender;
+- (IBAction)countButtonPressed:(UIButton *)sender;
+- (IBAction)intensityButtonPressed:(UIButton *)sender;
 - (IBAction)statisticButtonPressed:(UIButton *)sender;
 
 @end

@@ -23,6 +23,13 @@
         [self yearButtonPressed:nil];
     }
     
+    if (orgasmData.intensityButtonPressed) {
+        [self intensityButtonPressed:nil];
+    } else {
+        [self countButtonPressed:nil];
+    }
+    
+    
     UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"background_iphone5.png"]];
     self.view.backgroundColor = background;
     
@@ -53,17 +60,14 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.chartView forKey:@"chartView"];
-    [aCoder encodeObject:self.monthButton forKey:@"monthButton"];
-    [aCoder encodeObject:self.yearButton forKey:@"yearButton"];
 }
+
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
         NSLog(@"SUPER");
         self.chartView = [aDecoder decodeObjectForKey:@"chartView"];
-        self.monthButton = [aDecoder decodeObjectForKey:@"monthButton"];
-        self.yearButton = [aDecoder decodeObjectForKey:@"yearButton"];
     }
     return self;
 }
@@ -99,33 +103,51 @@
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
     orgasmData.monthButtonPressed = YES;
     
-    UIImageView *nonactive = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
-    UIImageView *active = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
-    
-//    nonactive.frame = CGRectMake(128, 40, 0, 0);
-//    active.frame = CGRectMake(128, 40, 0, 0);
-    
-    self.yearButton.backgroundColor = [[UIColor alloc] initWithPatternImage:nonactive.image];
-    self.monthButton.backgroundColor = [[UIColor alloc] initWithPatternImage:active.image];
+    self.yearButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
+    self.monthButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
     
     self.isYear = NO;
 }
+
 
 - (void)yearButtonPressed:(UIButton *)sender {
     
     OrgasmData *orgasmData = [OrgasmData sharedInstance];
     orgasmData.monthButtonPressed = NO;
-    
-    UIImageView *nonactive = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
-    UIImageView *active = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
 
-//    nonactive.frame = CGRectMake(128, 40, 0, 0);
-//    active.frame = CGRectMake(128, 40, 0, 0);
-    
-    self.monthButton.backgroundColor = self.monthButton.backgroundColor = [[UIColor alloc] initWithPatternImage:nonactive.image];
-    self.yearButton.backgroundColor = [[UIColor alloc] initWithPatternImage:active.image];
+    self.monthButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
+    self.yearButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
     
     self.isYear = YES;
+}
+
+
+- (void)intensityButtonPressed:(UIButton *)sender {
+    
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    orgasmData.intensityButtonPressed = YES;
+    
+    self.countButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
+    self.intensityButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
+    
+    self.isIntensity = YES;
+}
+
+
+- (void)countButtonPressed:(UIButton *)sender {
+    
+    OrgasmData *orgasmData = [OrgasmData sharedInstance];
+    orgasmData.intensityButtonPressed = NO;
+    
+    self.intensityButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_nonactive.png"]];
+    self.countButton.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"stat_trigger_active.png"]];
+    
+    self.isIntensity = NO;
+}
+
+
+- (void)statisticButtonPressed:(UIButton *)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
@@ -196,12 +218,6 @@
     }
     
     return 0;
-}
-
-
-- (IBAction)statisticButtonPressed:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-    NSLog(@"POP");
 }
 
 @end

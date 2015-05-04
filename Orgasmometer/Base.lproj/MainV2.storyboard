@@ -151,38 +151,38 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-eO-WvH">
                                         <rect key="frame" x="21" y="338" width="133" height="35"/>
-                                        <state key="normal" title="Month">
+                                        <state key="normal" title="month">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="monthButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="JoB-wU-wgL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6P-gV-bhf">
-                                        <rect key="frame" x="166" y="338" width="133" height="35"/>
-                                        <state key="normal" title="Year">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="yearButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="OBf-O2-Gxy"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pr-Lh-qJi">
                                         <rect key="frame" x="21" y="381" width="133" height="35"/>
-                                        <state key="normal" title="Intensity">
+                                        <state key="normal" title="intensity">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="monthButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="CBZ-6c-bEL"/>
+                                            <action selector="intensityButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="NXJ-oL-oUd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dp-9z-dr0">
                                         <rect key="frame" x="166" y="381" width="133" height="35"/>
-                                        <state key="normal" title="Count">
+                                        <state key="normal" title="count">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="yearButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="HnX-Ay-uak"/>
+                                            <action selector="countButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="sDl-M0-fdP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6P-gV-bhf">
+                                        <rect key="frame" x="166" y="338" width="133" height="35"/>
+                                        <state key="normal" title="year">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="yearButtonPressed:" destination="pxq-5M-Gaf" eventType="touchUpInside" id="OBf-O2-Gxy"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -192,6 +192,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="zXR-Jb-Wpx"/>
                     <connections>
+                        <outlet property="countButton" destination="2dp-9z-dr0" id="iGy-rT-e97"/>
+                        <outlet property="intensityButton" destination="7pr-Lh-qJi" id="R9U-yx-ovx"/>
                         <outlet property="monthButton" destination="PfO-eO-WvH" id="HD5-cd-1nX"/>
                         <outlet property="yearButton" destination="N6P-gV-bhf" id="IDt-co-tcM"/>
                     </connections>

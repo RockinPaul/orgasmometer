@@ -27,6 +27,7 @@
 
 @property (nonatomic) BOOL monthButtonPressed; // YES - monthButtonPressed :)
                                                // NO  - yearButtonPressed
+@property (nonatomic) BOOL intensityButtonPressed; // ... you guessed it.
 
 - (long)getOrgasmsCountForStartDate:(NSDate *)startDate andEndDate:(NSDate *)endDate;
 
